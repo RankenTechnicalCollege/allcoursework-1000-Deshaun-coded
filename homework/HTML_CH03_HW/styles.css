@@ -1,7 +1,7 @@
 body{
   font-famiily: Arial, Helvetica, sans-serif;
   font-size: 100%;
-  background-color: blue;
+  background-image: linear-gradient(to bottom left, rgb(168, 77, 138),rgb(66, 155, 118));
   color: red; 
 }
 h1 {font-size: 250%;}
