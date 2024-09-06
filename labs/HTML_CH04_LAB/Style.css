@@ -1,0 +1,23 @@
+body {
+  font-family: Ariel, Helvetica, sans-sarif;
+  font-size: 100%;
+  background-color: #eaeaea;
+   color: #000033
+}
+* {color: brown;
+  font: 1.2em,;
+  font-style: Verdana;
+
+}
+.new {
+  font-weight: bold; font-style: italic ;
+} 
+
+a {
+  text-decoration: none;
+  background-color: white; text-decoration-color:#000099; font-family: sans-serif, ;
+} 
+
+.h3 {background-color: rgb(228, 18, 18); text-decoration-color: rgb(199, 154, 146); font-family: Helvetica,
+  
+}
