@@ -1,0 +1,15 @@
+body {
+  background-color: white; 
+  color: #000099;
+  font-family: Arial;
+}
+
+h1,a{
+  background-color: #CCCCCC; font-family: 'times new roman'; color: red;
+}
+h2{
+
+}
+em{
+  font-style: italic;
+}
