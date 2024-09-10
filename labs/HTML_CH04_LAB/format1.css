@@ -13,3 +13,7 @@ h2{
 em{
   font-style: italic;
 }
+
+a:hover,a:focus{
+  color:black
+}
