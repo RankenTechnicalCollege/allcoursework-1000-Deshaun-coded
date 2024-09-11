@@ -1,0 +1,33 @@
+header{
+background-color: aquamarine;
+color: black;
+}
+h1{
+  color: black;
+}
+
+h3{
+  border:dashed black;
+}
+ul.circle{
+list-style-type:circle;
+}
+#li1{
+background-color: pink;
+}
+#li2{
+background-color: beige;
+}
+#li3{
+background-color: brown;
+}
+#li4{
+background-color: turquoise;
+}
+#li5{
+background-color: tomato;
+}
+footer{
+  background-color:teal ;
+  color: white;
+}
