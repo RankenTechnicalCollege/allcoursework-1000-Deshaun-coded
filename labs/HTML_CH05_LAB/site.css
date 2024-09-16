@@ -1,0 +1,9 @@
+body{
+  background-image: url("images/homebtn.gif");
+  background-size: 5em;
+  background-position: left;
+  background-repeat: repeat-y; /*repeats horizontally*/
+  background-attachment: fixed;
+  height: 100vh;
+  width: auto;
+}

@@ -1,16 +1,4 @@
-body{
-  background-image: url("images/homebtn.gif");
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat; /*repeats horizontally*/
-  background-attachment: fixed;
-  height: 100vh;
-  width: auto;
-}
-h1{
-  margin:;
-  padding: 100px;
-}
+
 a{
   margin: 20px;
   padding: px;
@@ -18,24 +6,37 @@ a{
 }
 div{
   margin: 50px;
-  padding: ;
+  /*padding: ;*/
 }
 footer{
   background-color: lightblue; 
   font-style: Arial; color: darkblue; 
   padding: 10px; 
   border: dashed darkblue;
+  text-align: center;
 }
 #notice{
   width: 80%;
+  text-align: center;
+  border: solid black;
+
 }
 h1{
   color: hsla(red, green, blue, 50%);
   font-style: sans-serif;
   font-size: 4em;
+  margin:6;
+  padding: 100px;
+  text-shadow: 8px 8px #CCCCCC;
 }
 #feature{
   font:4em;color: red; font-style:Arial;
   background-color: white; width: 80%;
   text-shadow: 2px 2px #CCCCCC;
+}
+
+.h2{
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+
 }

@@ -1,0 +1,15 @@
+body{
+  background-image: url("images/homebtn.gif");
+  background-size: 5em;
+  /*background-position: ; */
+  background-repeat: repeat-x; /*repeats horizontally*/
+  background-attachment: fixed;
+  height: 100vh;
+  width: auto;
+}
+
+.h3{
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  
+}
