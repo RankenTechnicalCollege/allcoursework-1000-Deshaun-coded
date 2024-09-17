@@ -1,0 +1,51 @@
+.flex-container{
+  overflow:hidden;
+  background-color: #e9e9e9;
+}
+
+.flex-container a{
+  text-decoration: none;
+  justify-content: space-around;
+  align-items: stretch;
+
+}
+
+.flex-container a:hover {
+  background-color: #ddd;
+  color:black
+}
+
+
+.flex-container a.active {
+  background-color: #2196F3;
+  color: white;
+}
+
+/* Style the search box inside the navigation bar */
+.flex-container> input[type=text] {
+  float: right;
+  padding: 6px;
+  border: none;
+  margin-top: 8px;
+  margin-bottom: 8px;
+  margin-right: 16px;
+  font-size: 17px;
+}
+
+/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
+@media screen and (max-width: 390px) {
+  .flex-container a, .flex-container input[type=text] {
+    float: none;
+    display: block;
+    width: 100%;
+    margin: 0;
+    padding: 14px;
+    flex-direction: column;
+  }
+  .flex input[type=text] {
+    border: 1px solid #ccc;
+  }
+}
+
+@media screen and (min-width: 662.22px) {
+  .flex-container a, .flex-container input[type=text] }
