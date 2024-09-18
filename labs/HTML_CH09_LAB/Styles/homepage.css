@@ -1,3 +1,7 @@
+#flex-container{
+border-radius:  100vh;
+}
+
 .flex-container{
   overflow:hidden;
   background-color: #e9e9e9;
@@ -6,40 +10,65 @@
 .flex-container a{
   text-decoration: none;
   justify-content: space-between;
-  align-items: stretch;
+  align-items: ;
   display: flex;
 
 }
 
+.flex-container2 h1,a.link{
+text-decoration: none;
+background-color: brown;
+flex-direction: row-reverse;
+display: flex;
+  color: #ccc;
+  height:;
+  width:100%;
+  padding:;
+margin: 20px 20px 50px;
+}
+
+
+
+.flex-container2 h1,a.link{
+  
+  flex-direction:row-reverse;
+  justify-content: center;
+  
+
+}
 .flex-container a:hover {
-  background-color: #ddd;
-  color:black
+  background-color: #000000;
+  color:white
+}
+
+.flex-container a:visited{
+  color: rgb(243, 10, 10);
 }
 
 
 .flex-container a.active {
-  background-color: #2196F3;
+  background-color: black;
   color: white;
 }
 
+
 /* Style the search box inside the navigation bar */
 .flex-container> input[type=text] {
-  float: right;
-  display:block;
+  display:flex;
   padding: 6px;
   border: none;
   margin-top: 8px;
   margin-bottom: 8px;
   margin-right: 16px;
   font-size: 17px;
+  font-weight: bolder;
 }
 
 /* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@meda screen and (max-width: 644px) {
+@media screen and (max-width: 644px) {
   .flex-container a, .flex-container input[type=text] {
-    float: none;
     display: block;
-    width: 100%;
+    width: 50%;
     margin: 0;
     padding: 14px;
     flex-direction: column;
@@ -49,5 +78,5 @@
   }
 }
 
-@meia screen and (min-width: 662.22px) {
+@media screen and (min-width: 662.22px) {
   .flex-container a, .flex-container input[type=text] }
