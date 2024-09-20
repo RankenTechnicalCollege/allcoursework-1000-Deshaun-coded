@@ -19,11 +19,12 @@ width: calc(100% - 2em);
 
 .flex-container-2{
   display:flex;
+  flex-direction: ;
   justify-content: center;
+  justify-content: space-between;
   border: solid;
   margin: 0;
   padding: 0;
-  flex-direction: row;
 
 
 }
