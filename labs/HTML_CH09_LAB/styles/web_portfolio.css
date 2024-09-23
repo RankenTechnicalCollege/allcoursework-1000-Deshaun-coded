@@ -2,6 +2,7 @@ body{
   flex-grow: 1;
   height: 100vh;
   background-color: rgb(128, 128, 128);
+  overflow: scroll;
 
 }
 
@@ -40,6 +41,13 @@ background-color: rgb(233, 161, 94);
   color: #000000;
 }
 
+.box2{
+  
+  display: flex;
+  flex-direction: column;
+  padding:1em;
+}
+
 .box{
  
   display: flex;
@@ -50,6 +58,7 @@ background-color: rgb(233, 161, 94);
   padding: 0;
   margin: 0;
 }
+
 
 .lower_half{
   border: solid black;
@@ -71,6 +80,20 @@ footer{
   justify-content: center;
 }
 
+footer p{
+  display:flex;
+  justify-content:space-around;
+}
+
+footer ,.p4{
+  display:flex;
+  
+  justify-content: flex-end;
+}
+
+.logo img{
+  margin: 0em 5em 0em 0em;
+}
 
 footer .p2{
   
@@ -78,6 +101,7 @@ footer .p2{
   align-self: center;
   overflow:visible;
   padding: 0;
+  margin: 0em 20em 0em 0em;
   
 }
 
@@ -91,4 +115,530 @@ footer .p2{
   display: flex;
   align-items:center;
 
+}
+
+@media only screen and (min-width:600px) {
+  body{
+    flex-grow: 1;
+    height: 100vh;
+    background-color: rgb(128, 128, 128);
+    overflow: scroll;
+  
+  }
+  
+  .title-box{
+    border: solid;
+    display: flex;
+    
+  
+  }
+  
+  .navbar{
+  overflow:none;
+  background-color: #e9e9e9;
+  
+  flex-grow: 1;
+  background-color: rgb(233, 161, 94);
+  }
+  
+  .navbar{
+    overflow:visible;
+    background-color: #969393;
+  
+  }
+  
+  .navbar ul,li,a{
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom:0px;
+    margin-top:0px;
+    padding-bottom: 0px;
+    color: #000000;
+  }
+  
+  .box2{
+    
+    display: flex;
+    flex-direction: column;
+    padding:1em;
+  }
+  
+  .box{
+   
+    display: flex;
+    flex-direction:column;
+  }
+  
+  .box h1,p{
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .lower_half{
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    height: 77vh;
+  }
+  
+  
+
+  .lower_half img, .column2{
+    display: flex;
+    flex-direction:column;
+    width: 10em;
+    height: 10em;
+  }
+  
+  .lower_half .column2 .logo img{
+    width: 5em;
+    height: 4em;
+    }
+
+  .column2{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  footer{
+    border: solid black;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer p{
+    display:flex;
+    justify-content:space-around;
+  }
+  
+  footer ,.p4{
+    display:flex;
+    
+    justify-content: flex-end;
+  }
+  
+  .logo img{
+    margin: 0em 1em 0em 0em;
+  }
+  
+  footer .p2{
+    
+    display:flex;
+    align-self: center;
+    overflow:visible;
+    padding: 0;
+    margin: 0em 4em 0em 0em;
+    
+  }
+  
+  .logo{
+    
+    display:flex;
+  }
+  
+  .logo ,p{
+    
+    display: flex;
+    align-items:center;
+  
+  }
+}
+
+@media only screen and (min-width:900px) {
+  body{
+    flex-grow: 1;
+    height: 100vh;
+    background-color: rgb(128, 128, 128);
+    overflow: scroll;
+  
+  }
+  
+  .title-box{
+    border: solid;
+    display: flex;
+    
+  
+  }
+  
+  .navbar{
+  overflow:none;
+  background-color: #e9e9e9;
+  
+  flex-grow: 1;
+  background-color: rgb(233, 161, 94);
+  }
+  
+  .navbar{
+    overflow:visible;
+    background-color: #969393;
+  
+  }
+  
+  .navbar ul,li,a{
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom:0px;
+    margin-top:0px;
+    padding-bottom: 0px;
+    color: #000000;
+  }
+  
+  .box2{
+    
+    display: flex;
+    flex-direction: column;
+    padding:1em;
+  }
+  
+  .box{
+   
+    display: flex;
+    flex-direction:column;
+  }
+  
+  .box h1,p{
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .lower_half{
+    border: solid black;
+    display: flex;
+    flex-direction: column;
+    height: 77vh;
+  }
+  
+  
+
+  .lower_half img, .column2{
+    display: flex;
+    flex-direction:column;
+    width: 10em;
+    height: 10em;
+  }
+  
+  .lower_half .column2 .logo img{
+    width: 5em;
+    height: 4em;
+    }
+
+  .column2{
+    display: flex;
+    flex-direction: column;
+  }
+  
+  
+  footer{
+    border: solid black;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer p{
+    display:flex;
+    justify-content:space-around;
+  }
+  
+  footer ,.p4{
+    display:flex;
+    
+    justify-content: flex-end;
+  }
+  
+  .logo img{
+    margin: 0em 1em 0em 0em;
+  }
+  
+  footer .p2{
+    
+    display:flex;
+    align-self: center;
+    overflow:visible;
+    padding: 0;
+    margin: 0em 15em 0em 0em;
+    
+  }
+  
+  .logo{
+    
+    display:flex;
+  }
+  
+  .logo ,p{
+    
+    display: flex;
+    align-items:center;
+  
+  }
+}
+
+@media only screen and (min-width:1200px) {
+  body{
+    font-size: 2.5em;
+    flex-grow: 1;
+    height: 100vh;
+    background-color: rgb(128, 128, 128);
+    overflow: scroll;
+  
+  }
+  
+  body img{
+    width: 9%;
+    height: 9%;
+  }
+
+  .title-box{
+    border: solid;
+    display: flex;
+    
+  
+  }
+  
+  .navbar{
+  overflow:none;
+  background-color: #e9e9e9;
+  
+  flex-grow: 1;
+  background-color: rgb(233, 161, 94);
+  }
+  
+  .navbar{
+    overflow:visible;
+    background-color: #969393;
+  
+  }
+  
+  .navbar ul,li,a{
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom:0px;
+    margin-top:0px;
+    padding-bottom: 0px;
+    color: #000000;
+  }
+  
+  .box2{
+    
+    display: flex;
+    flex-direction: column;
+    padding:1em;
+  }
+  
+  .box{
+   
+    display: flex;
+    flex-direction:column;
+  }
+  
+  .box h1,p{
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .lower_half{
+    border: solid black;
+    display: flex;
+    height: 77vh;
+  }
+  
+  .column1 {
+    display: flex;
+    flex: 30%;
+  }
+  
+  .column2{
+    flex:70%;
+  }
+  
+  footer{
+    border: solid black;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer p{
+    display:flex;
+    justify-content:space-around;
+  }
+  
+  footer ,.p4{
+    display:flex;
+    
+    justify-content: flex-end;
+  }
+  
+  .logo img{
+    margin: 0em 5em 0em 0em;
+  }
+  
+  footer .p2{
+    
+    display:flex;
+    align-self: center;
+    overflow:visible;
+    padding: 0;
+    margin: 0em 20em 0em 0em;
+    
+  }
+  
+  .logo{
+    
+    display:flex;
+  }
+  
+  .logo ,p{
+    
+    display: flex;
+    align-items:center;
+  
+  }
+}
+
+@media only screen and (min-width:2500px) {
+  body{
+    flex-grow: 1;
+    height: 100vh;
+    background-color: rgb(128, 128, 128);
+    overflow: scroll;
+  
+  }
+  
+  .title-box{
+    border: solid;
+    display: flex;
+    
+  
+  }
+  
+  .navbar{
+  overflow:none;
+  background-color: #e9e9e9;
+  
+  flex-grow: 1;
+  background-color: rgb(233, 161, 94);
+  }
+  
+  .navbar{
+    overflow:visible;
+    background-color: #969393;
+  
+  }
+  
+  .navbar ul,li,a{
+    list-style-type:none;
+    display: flex;
+    justify-content: space-between;
+    text-decoration: none;
+    
+    margin-left: 0px;
+    margin-right: 0px;
+    margin-bottom:0px;
+    margin-top:0px;
+    padding-bottom: 0px;
+    color: #000000;
+  }
+  
+  .box2{
+    
+    display: flex;
+    flex-direction: column;
+    padding:1em;
+  }
+  
+  .box{
+   
+    display: flex;
+    flex-direction:column;
+  }
+  
+  .box h1,p{
+    padding: 0;
+    margin: 0;
+  }
+  
+  
+  .lower_half{
+    border: solid black;
+    display: flex;
+    flex-direction: row;
+    height: 77vh;
+  }
+
+  .lower_half img{
+    width: 90%;
+    height: 50%;
+    
+  }
+  
+  .column1 {
+    display: flex;
+    
+    flex: 30%;
+  }
+  
+  .column2{
+    flex:70%;
+  }
+  
+  footer{
+    border: solid black;
+    display: flex;
+    justify-content: center;
+  }
+  
+  footer p{
+    display:flex;
+    justify-content:space-around;
+  }
+  
+  footer ,.p4{
+    display:flex;
+    
+    justify-content: flex-end;
+  }
+  
+  .logo img{
+    margin: 0em 5em 0em 0em;
+  }
+  
+  footer .p2{
+    
+    display:flex;
+    align-self: center;
+    overflow:visible;
+    padding: 0;
+    margin: 0em 20em 0em 0em;
+    
+  }
+  
+  .logo{
+    
+    display:flex;
+  }
+  
+  .logo ,p{
+    
+    display: flex;
+    align-items:center;
+  
+  }
 }
