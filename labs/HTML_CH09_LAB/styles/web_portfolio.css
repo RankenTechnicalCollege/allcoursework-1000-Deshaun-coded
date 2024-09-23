@@ -387,7 +387,7 @@ footer .p2{
 
 @media only screen and (min-width:1200px) {
   body{
-    font-size: 2.5em;
+    font-size: 1.5em;
     flex-grow: 1;
     height: 100vh;
     background-color: rgb(128, 128, 128);
@@ -456,6 +456,7 @@ footer .p2{
   
   .lower_half{
     border: solid black;
+    flex-direction: row;
     display: flex;
     height: 77vh;
   }
@@ -626,7 +627,7 @@ footer .p2{
     align-self: center;
     overflow:visible;
     padding: 0;
-    margin: 0em 20em 0em 0em;
+    margin: 0em 1em 0em 0em;
     
   }
   
