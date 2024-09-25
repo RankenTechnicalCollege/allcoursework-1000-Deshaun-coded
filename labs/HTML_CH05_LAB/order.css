@@ -8,8 +8,7 @@ body{
   width: auto;
 }
 
-.h3{
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
-  
+nav{
+  padding: 0px 0px 0px 0px;
+  margin: 59px 0px 0px 0px;
 }

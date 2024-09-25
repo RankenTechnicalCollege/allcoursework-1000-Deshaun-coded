@@ -1,7 +1,12 @@
+body{
+  width: 100vw;
+  height: 100vh;
+}
+
 
 a{
   margin: 20px;
-  padding: px;
+  padding: 0px;
   padding-left: 0px;
 }
 div{
@@ -15,12 +20,8 @@ footer{
   border: dashed darkblue;
   text-align: center;
 }
-#notice{
-  width: 80%;
-  text-align: center;
-  border: solid black;
 
-}
+
 h1{
   color: hsla(red, green, blue, 50%);
   font-style: sans-serif;
@@ -29,14 +30,5 @@ h1{
   padding: 100px;
   text-shadow: 8px 8px #CCCCCC;
 }
-#feature{
-  font:4em;color: red; font-style:Arial;
-  background-color: white; width: 80%;
-  text-shadow: 2px 2px #CCCCCC;
-}
 
-.h2{
-  text-decoration-line: underline;
-  text-decoration-style: dotted;
 
-}

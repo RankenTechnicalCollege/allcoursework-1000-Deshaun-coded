@@ -1,0 +1,33 @@
+body{
+  border:2px solid black;
+  font-family: monospace, serif, sans-serif,Impact;
+  height: 100vh;
+  width: 100%;
+}
+
+
+.h2{
+  font-variant: normal;
+  line-height: 30px;
+  font-weight: lighter;
+}
+
+h1{
+ border: solid red;
+}
+
+
+#h3{
+  font-style:italic;
+  font-style: normal;
+}
+
+nav{
+
+  border: solid color red;
+}
+
+body,p{
+  border: solid blue;
+}
+

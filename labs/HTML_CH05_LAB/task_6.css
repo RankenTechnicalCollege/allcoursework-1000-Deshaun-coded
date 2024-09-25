@@ -1,0 +1,40 @@
+footer{
+  background-color: lightblue;
+  font-family: Arial, Helvetica, sans-serif;
+  color: darkblue;
+  padding: 10px;
+  border: dashed darkblue 3px;
+}
+
+#notice{
+  width: 80%;
+  text-align: center;
+  
+
+}
+
+.h2{
+  text-decoration-line: underline;
+  text-decoration-style: dotted;
+  color: blueviolet;
+
+}
+
+h1{
+  color: hsla(red, green, blue, 50%);
+  font-style: sans-serif;
+  font-size: 4em;
+  margin:6;
+  padding: 100px;
+  text-shadow: 8px 8px #CCCCCC;
+}
+
+#feature{
+  font:4em;
+  color: red; 
+  font-style:Arial;
+  background-color: white; 
+  width: 80%;
+  text-shadow: 4px 4px #CCCCCC;
+}
+
