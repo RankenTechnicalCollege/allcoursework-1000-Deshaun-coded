@@ -1,0 +1,43 @@
+
+
+
+th.left, td.left { text-align: left; 
+
+}​
+
+thead, tfoot { background-color: rgb(224, 238, 144); 
+
+}​
+
+tfoot { 
+  font-weight: bold; 
+
+
+}​
+
+table {
+  border: 1px solid black
+}
+
+th, td {
+   border: 1px solid black;
+   text-align: right;
+
+}
+
+thead, tfoot {
+   background-color: lightgreen;
+}
+
+tbody tr:nth-child(even) {
+  background-color: yellow;
+}
+
+th{
+  text-align: left;
+}
+
+
+#marker{
+  background-color: white;
+}
