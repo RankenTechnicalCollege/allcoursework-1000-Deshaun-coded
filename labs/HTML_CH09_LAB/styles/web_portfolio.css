@@ -530,7 +530,7 @@ footer .p2{
   
   .logo{
     
-    margin:100px 300px 0px 0px;
+    
     display:flex;
   }
   
@@ -555,8 +555,8 @@ footer .p2{
   }
   
   body img{
-    width: 9%;
-    height: 9%;
+    width: 15%;
+    height: 15%;
   }
 
   .title-box{
@@ -624,10 +624,16 @@ footer .p2{
     display: flex;
     flex: 30%;
   }
+
+  .column1 img{
+    width: 15em;
+    height: 15em; 
+    
+  }
   
   .column2{
     flex:70%;
-    font-size: 10px;
+    font-size: 15px;
   }
   
   footer{
@@ -648,7 +654,7 @@ footer .p2{
   }
   
   .logo img{
-    margin: 0em 19em 0em 0em;
+    margin: 0em 2em 0em 0em;
     
   }
   
@@ -657,20 +663,21 @@ footer .p2{
     display:flex;
     align-self: center;
     overflow:visible;
-    padding: 0;
-    margin: 0em 20em 0em 0em;
+    justify-content: center;
+    
     
   }
   
   .logo{
-    
+    margin: 100px 0px 0px 0px;
     display:flex;
+    justify-content: flex-start;
   }
   
   .logo p{
     
     display: flex;
-    align-items:center;
+    
   
   }
 }
