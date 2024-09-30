@@ -1,0 +1,21 @@
+#contact{
+  text-shadow:2px 2px 8px rgb(91, 3, 255);
+  padding: 20px;
+  margin-top: 50px;
+}
+
+#contact2 {
+margin-top: 20px;
+}
+
+#short{
+  margin-left:0px ;
+  margin-right: 0px;
+}
+
+.card{
+  padding-top: 3px;
+  padding-bottom: 3px;
+  margin-top: 3px;
+  margin-bottom: 3px;
+}
