@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Chapter 13 HW</title>
+  <link rel="stylesheet" href="ch13.css">
+</head>
+<body>
+<form>
+<label>Name:</label><br>
+<input type="text"  id="username" autofocus><br><br>
+<label>E-mail:</label><br>
+<input type="email" id="email"><br><br>
+
+<fieldset>
+  <legend>select your favorite types of music:</legend>
+  <input type="radio" name="crust" id="crust1" value="thin">
+  <label for="crust1">Thin Crust</label><br>
+  <input type="radio" name="crust" id="Crust2" value="deep">
+  <label for="crust2"> Deep Dish</label><br>
+  <input type="radio" name="crust" id="crust3" value="hand">
+  <label for="crust3">Hand Tossed</label><br>
+</fieldset><br>
+
+<fieldset>
+  <legend>Select your favorite topping:</legend>
+  <input type="checkbox" name="topping1" id="topping1" value="pepperoni">
+  <label for="topping1">Pepperoni</label><br>
+  <input type="checkbox" name="topping2" id="topping2" value="sausage">
+  <label for="topping2">Sausage</label><br>
+  <input type="checkbox" name="topping3" id="topping3" value="mushroom">
+  <label for="topping3">Black Olives</label><br>
+</fieldset><br><br>
+
+<fieldset>
+  <legend>Styles:</legend><br>
+  <select id="style_and_size" size="3" multiple>
+    <optgroup label="The New Yorker">
+      <option value="ny10">10"</option>
+      <option value="ny12">12"</option>
+      <option value="ny14">16"</option>
+      <option value="ny20">20"</option>
+    </optgroup>
+  </select>
+</fieldset><br>
+<fieldset>
+<select id="style_and_size" size="3" multiple>
+  <optgroup label="Chicago Style">
+    <option value="chi10">10"</option>
+    <option value="chi12">12"</option>
+    <option value="chi16">16"</option>
+    <option value="chi20">20"</option>
+  </optgroup>
+  </select>
+</fieldset><br>
+
+Any specifications such as doneness?<br>
+<textarea id="comments"
+    placeholder="If you have any comments, please enter them here.">
+  </textarea><br>
+
+  <button type="submit" value="submit form">
+    <label for="submit">Submit</label></button>
+    <button type="reset" value="reset form">
+      <label for="reset">Reset</label></button>
+    </form>
+
+    <li class="d-flex mb-3">
+      <div class="icon bg-primary flex-shrink-0"><i class="fas text-white fa-fw fa-envelope"></i></div>
+      <div class="ms-3">
+        <h5 class="mb-0">Email</h5>
+        <p class="text-muted text-sm"><a href="https://form.jotform.com/242731364720048" target="_blank">Deshaun_Brown@insideranken.org</a> </p>
+      </div>
+    </li>
+
+  
+  
+
+</body>
+</html>
