@@ -31,14 +31,21 @@ body{
 .header-text{
     padding: 0.5em;
     flex-shrink: 0;
-}
-
-.header-text{
-  text-decoration: none;
   color: black;
 }
 
+h1 , a{
+  text-decoration:none;
+}
+
+h1 , a:visited{
+  color: black;
+}
+
+
+
 .header-searchform{
+  display: flex;
     flex-basis: 50%;
     flex-grow: 1;
     margin-right: 1em;
@@ -89,7 +96,7 @@ body{
     background-color: gray;
 }
 
-.navbar-menu .navbar-menu{
+.navbar-menu {
   display: none;
   flex-direction: column;
   justify-content: flex-start;
@@ -205,7 +212,7 @@ body{
     width:50px;
     height:50px;
   }
-
+ 
   .header-text{
     flex-grow:1;
      
@@ -229,4 +236,3 @@ body{
   }
 
 }
-

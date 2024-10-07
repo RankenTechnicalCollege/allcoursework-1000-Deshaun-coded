@@ -3,17 +3,15 @@
   background-color: #e9e9e9;
 }
 
-.container a{
+.container, a{
+  display: flex;
   text-decoration: none;
   justify-content: space-between;
-  align-items: stretch;
-  display: flex;
-
 }
 
 .container a:hover {
   background-color: #ddd;
-  color:black
+  color:black;
 }
 
 
@@ -27,7 +25,7 @@
 }
 
 /* Style the search box  */
-.container> input[type=text] {
+ input[type=text] {
   float: right;
   display:block;
   padding: 6px;
@@ -50,11 +48,14 @@ button {
   cursor: pointer;
 }
 
-.button1 {background-color: #04AA6D;} /* Green */
-.button2 {background-color: #008CBA;} /* Blue */
+.button1 {background-color: #04AA6D;}
+.button2 {background-color: #008CBA;}
+.button3 {background-color: #f44336;}
 
-/* When the screen is less than 600px wide, stack the links and the search field vertically instead of horizontally */
-@media screen and (min-width: 600px) {
+.button1 {padding: 10px 24px;}
+.button2 {padding: 12px 28px;}
+.button3 {padding: 14px 40px;}
+
   .container a, .container input[type=text] {
     float: none;
     display: block;
@@ -66,19 +67,12 @@ button {
   .flex input[type=text] {
     border: 1px solid #ccc;
   }
-}
 
 
-  @media screen and (min-width: 100px) {
-    .container a, .container input[type=text] {
-      float: none;
-      display: block;
-      width: 100%;
-      margin: 0;
-      padding: 14px;
+  @media (min-width: 100px ) and (max-width:600px) {
+    .container ,a .container input[type=text] {
+
+      display: flex;
       flex-direction: column;
-    }
-    .flex input[type=text] {
-      border: 1px solid #ccc;
-    }
+  }
 }
