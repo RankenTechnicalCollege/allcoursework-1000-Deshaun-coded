@@ -13,7 +13,7 @@ total+= score2;
 const score3= parseInt(prompt("Enter test Score"));
 total+= score3;
 
-const average= parseFloat(prompt(total/3));
+const average= parseFloat(total/3);
 
 const html= `<p>Score 1 =${score1}</p>
              <p>Score 2 =${score2}</p>
