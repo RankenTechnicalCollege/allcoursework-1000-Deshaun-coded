@@ -5,13 +5,17 @@
  
  
  
- let fahrenheit=0;
+ 
 
- let Temp=parseFloat (prompt(fahrenheit - 32) * 5 / 9,);
+let fahrenheit = prompt('Enter Fahrenheit Temperature');
+ 
+let celsius = parseFloat((fahrenheit-32)*(5 / 9));
+
+ 
 
 //get 3 scores from user and add them together
 
 
-const  html=`<p><label>Celsius: ${Temp.toFixed(2)}</p>`;
+const  html=`<p>${fahrenheit}F=${celsius.toFixed(2)}C</p>`;
         
      document.write(html);
