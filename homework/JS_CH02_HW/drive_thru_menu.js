@@ -44,4 +44,4 @@ document.getElementById('btnClick').onclick = () => {
      document.getElementById('btnClick').textContent = totalCost.toFixed(2);
  };
 document.write
->>>>>>> cdc5477999201a316a20621b0dd41bd7e62128de
+
