@@ -12,8 +12,8 @@ let score=0;
 
 do{
   // get a score from the user
-  score= parseInt(
-    prompt("Enter a test score, or enter -1 to end scores.",-1));
+  score= parseFloat(
+    prompt("Enter a test score, or enter -1 to end scores.",0));
 
     // if it's valid, add to total, increment count, and display score 
     if (score>= 0 && score <= 100){
@@ -28,13 +28,14 @@ do{
 while(score !=-1);
 
 if(score.length>0){
+  //use a for-in loop to add each score to total and display it
 let total=0
   for (let i in scores){
     total= total + scores[i];
-    console.log(`<p>Score ${parseInt(i)+1}:${scores[i]}</p>`);
+    document.write(`<p>Score ${parseFloat(i)+1}:${scores[i]}</p>`);
   }
 }
 
 //calculate and display average score
-const average= parseInt(total/scores);
+const average= parseFloat(total/scores.length);
 document.write(`<p> Average score is ${average}</p>`);
