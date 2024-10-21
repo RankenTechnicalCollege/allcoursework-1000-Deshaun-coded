@@ -11,24 +11,41 @@
   <h1>The Future Value Calculator</h1>
   <script>
   let investment=0;
-  do{
-    investment= parseFloat(prompt("Enter investment amount as xxxxx.xx", 10000));
-  } 
-  while( isNaN(investment) );
-
   let rate=0;
-  do{
-    rate= parseFloat(prompt("Enter interest rate as xx.x", 7.5));
-  }
-  while( isNaN(rate));
-
   let years= 0;
+  let interest=0;
 
   do {
     years= parseInt(prompt("Enter number of years", 10));
 
   }
   while(isNaN(years));
+
+  do{interest =parseInt(prompt("Enter interest amount as xxxxx.xx", 0))
+
+  } while(isNaN(interest));
+
+  do{
+    value=parseInt(prompt("Enter value amount"))
+
+  }while(isNaN(interest));
+
+  if (years > 0 && interest > 0 && value > 0)
+
+  let annualRate= parseFloat()
+
+  do{
+    investment= parseFloat(prompt("Enter investment amount as xxxxx.xx", 10000));
+  } 
+  while( isNaN(investment) );
+
+  do{
+    rate= parseFloat(prompt("Enter interest rate as xx.x", 7.5));
+  }
+  while( isNaN(rate));
+
+
+
 
   let futureValue=investment;
   for (let i =1; i <= years; i++)

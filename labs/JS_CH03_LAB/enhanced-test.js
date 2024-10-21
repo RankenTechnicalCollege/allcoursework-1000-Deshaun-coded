@@ -31,7 +31,7 @@ if(score.length>0){
 let total=0
   for (let i in scores){
     total= total + scores[i];
-    document.write(`<p>Score ${parseInt(i)+1}:${scores[i]}</p>`);
+    console.log(`<p>Score ${parseInt(i)+1}:${scores[i]}</p>`);
   }
 }
 
