@@ -6,10 +6,10 @@ https://www.tooplate.com/view/2117-infinite-loop
 
 */
 
-@import url("https://fonts.googleapis.com/css?family=Raleway:100,300,400,500,700,900");
+
 
 body {
-	font-family: "Raleway", sans-serif;
+	font-family: "Audiowide", sans-serif;
 	font-size: 1.2em;
   color: #707070;
   margin: 0;
@@ -72,6 +72,18 @@ blockquote {
 .tm-btn-primary:focus {
   color: white;
   background-color: #38B;
+}
+
+// <uniquifier>: Use a unique and descriptive class name
+
+#mulish {
+  font-family: "DynaPuff", system-ui;
+  font-optical-sizing: auto;
+  font-weight: weight;
+  font-style: normal;
+  font-variation-settings:
+    "width" 100;
+
 }
 
 /* Navbar */
