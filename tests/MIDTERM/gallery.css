@@ -1,0 +1,35 @@
+body{
+          
+  font-family: "Audiowide", sans-serif;
+}
+
+
+.carousel-control-prev-icon,
+.carousel-control-next-icon{
+  background-color: black;
+  border-radius: 50%;
+}
+
+.carousel-control-next{
+  right: 10px;
+}
+
+.display-4{
+  text-shadow: 2px 2px 4px #000000;
+}
+@media screen and (max-width: 480px) {
+  .carousel-item {
+      height: auto; 
+  }
+  .carousel-item img {
+      height: auto; 
+  }
+}
+@media screen and (max-width: 720px) {
+  .carousel-item {
+      height: auto; 
+  }
+  .carousel-item img {
+      height: auto; 
+  }
+}
