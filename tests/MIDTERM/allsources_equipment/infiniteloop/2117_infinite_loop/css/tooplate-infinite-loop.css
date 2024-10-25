@@ -18,7 +18,7 @@ body {
 }
 a {
   transition: all 0.3s ease;
-  color: #38B;
+  color: rgb(37, 126, 216);
 }
 
 a:hover,
@@ -74,7 +74,7 @@ blockquote {
   background-color: #38B;
 }
 
-// <uniquifier>: Use a unique and descriptive class name
+
 
 #mulish {
   font-family: "DynaPuff", system-ui;
@@ -109,7 +109,7 @@ blockquote {
 
 .navbar-brand:hover,
 .tm-navbar.scroll .navbar-brand:hover {
-  color: #38B;
+  color: rgb(29, 146, 219);
 }
 
 .tm-navbar.scroll .navbar-brand {
@@ -592,7 +592,7 @@ figure.effect-honey:hover h2 i {
 
 ::-ms-input-placeholder {
   /* Microsoft Edge */
-  color: white;
+  color: rgb(226, 24, 24);
 }
 
 .tm-footer {
