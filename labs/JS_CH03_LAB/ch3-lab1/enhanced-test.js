@@ -2,7 +2,7 @@
 
 //initialize total variable
 
-const scores = [];
+const scores = []; 
 
 let score = 0;
 
@@ -29,10 +29,18 @@ if (scores.length > 0) {
   for (let i in scores) {
     console.log('in the for loop');
     total = total+scores[i];
-    document.write(`<p>Score ${parseFloat(i)+1}:${scores[i]}</p>`);
+    document.write(`<p>Score ${parseFloat(i)+1}: ${scores[i]}</p>`);
   }
 
   //calculate and display average score
   const average = parseFloat(total/scores.length);
   document.write(`<p> Average score is ${average}</p>`);
-}
+
+  let highestScore = 0
+
+  for (const score of scores ){
+    if(score > highestScore)
+
+      document.write(`<p>Highest score is ${highestScore}</p>`)
+  }
+} 

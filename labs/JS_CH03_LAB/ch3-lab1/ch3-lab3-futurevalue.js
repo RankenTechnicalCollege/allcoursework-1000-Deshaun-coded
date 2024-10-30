@@ -4,7 +4,7 @@
       let interest = 0;
 
       //get interest rate amount- loop until user enters a number
-      do {
+      do 
         {
           rate = parseFloat(prompt('Enter interest rate amount as xxxxx.xx', 7.5));
         }
@@ -26,10 +26,14 @@
 
         let futureValue = investment;
         for (let i = 1; i <= years; i++) {
-          let interest = (futureValue += (futureValue * rate) / 100);
+          let interest = futureValue += futureValue * rate / 100;
 
-          //write results
-          document.write(`<p> year=${i} Interest=${interest.toFixed(2)}Value=${futureValue.toFixed(2)}</P>`);
+          
         }
-        again = prompt(' Repeat entries? (y/n)', 'y');
-      } while (again === 'y');
+      //write results
+      document.write(`<h4>Future Value with Yearly Interest</h4>`)
+
+      document.write(`<p><label>Investment amount:</label> ${investment}</p>`);
+      document.write(`<p><label>Interest rate:</label> ${rate}</p>`);
+      document.write(`<p><label>Years:</label> ${years}</p>`);
+      document.write(`<p><label>Future Values:</label> ${futureValue}</p>`);
