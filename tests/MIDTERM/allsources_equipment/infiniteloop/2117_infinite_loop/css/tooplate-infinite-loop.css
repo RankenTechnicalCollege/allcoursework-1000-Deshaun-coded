@@ -21,6 +21,13 @@ a {
   color: rgb(37, 126, 216);
 }
 
+.bootcard{
+  display: flex;
+  justify-content: center;
+  border: solid orange;
+}
+
+
 a:hover,
 a:focus {
   text-decoration: none;
@@ -76,15 +83,7 @@ blockquote {
 
 
 
-#mulish {
-  font-family: "DynaPuff", system-ui;
-  font-optical-sizing: auto;
-  font-weight: weight;
-  font-style: normal;
-  font-variation-settings:
-    "width" 100;
 
-}
 
 /* Navbar */
 
@@ -234,7 +233,7 @@ blockquote {
 }
 
 .tm-down-arrow-link {
-  display: block;
+  display: fixed;
   margin-top: 18%;
 }
 
@@ -561,7 +560,7 @@ figure.effect-honey:hover h2 i {
 	width: 90%;
   padding: 8px 20px;
   border-radius: 6px;
-  border: 1px solid white;
+  border: 1px solid rgb(252, 252, 252);
   background: transparent;
   color: white;
 }
@@ -674,12 +673,19 @@ p {
 @media (max-width: 767px) {
 
   .navbar-nav {
+    
     max-width: 200px;
     text-align: right;
   }
 
+  .bootcard{
+    display: flex;
+    justify-content: center;
+    border: solid orange;
+  }
+
   .navbar-collapse {
-    background-color: rgb(255, 255, 255);
+    
     padding: 10px;
     border-radius: 3px;
   }
