@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+ HEAD
 let total = 0;
 
 //get 3 scores from user and add them together

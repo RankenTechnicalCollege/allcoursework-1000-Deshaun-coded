@@ -1,74 +1,43 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" >
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" >
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css"
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Drive-Thru Order</title>
+    <link rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
       integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
-      crossorigin="anonymous"
-    >
-    <title>Restaurant Dive Thru</title>
-  </head>
-  <body>
-    <header class="bg-light">
-      <nav class="navbar navbar-expand-md navbar-expand-lg navbar-dark bg-dark">
-        <a
-          class="navbar-brand d-flex align-items-center"
-          href="/allcoursework-1000-Deshaun-coded/homework/JS_CH02_HW/images/ebb_logo.jpg"
-          >Einstein Bros.Bagels</a
-        >
-        <img
-          class="d-inline-block me-2"
-          src="/allcoursework-1000-Deshaun-coded/homework/JS_CH02_HW/images/ebb_logo.jpg"
-          width="30"
-          height="30"
-          alt="logo"
-        >
-        <button
-          type="button"
-          class="navbar-toggler"
-          data-bs-toggle="collapse"
-          data-bs-target="#navbar1"
-          aria-controls="navbar1"
-          aria-expanded="false"
-          aria-label="Toggle navigation"
-        >
-          <span class="navbar-toggler-icon"></span>
-        </button>
-        <div id="navbar1" class="navbar-collapse collapse">
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="#">Burgers</a>
-            </li>
-            <li class="navbar-nav">
-              <a class="nav-link" href="#">Fries</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="#">Sodas</a>
-            </li>
-          </ul>
+      crossorigin="anonymous">
+    <script href="./drive_thru.js"></script>
+    <link rel="stylesheet" href="./css/style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+</head>
+<body>
+
+<div class="container">
+    <h1 class="text-center">Welcome to Fast Food Drive-Thru</h1>
+    <form id="orderForm">
+        <div class="form-group">
+            <label for="burgers">Number of Burgers ($1 each):</label>
+            <input type="number" id="burgers" class="form-control" value="">
         </div>
-      </nav>
-    </header>
-    <main>
-      <form id="order-form" action="/order" method="post">
-      <menu>
-        <li><input id="burger" type="checkbox" class="menu-item" data-price="5.00">Burger 5.00$</li>
-        <li id="fries"><input type="checkbox" class="menu-item" data-price="2.50">Fries-2.50$</li>
-        <li id="sodas">Sodas</li>
-      </menu>
-      <button type="submit" class="btn btn-primary">Submit</button>
-      <button class="btn btn-primary" type="reset">Reset</button>
-      </form>
-      <button id="btnClick" type="submit" class="btn btn-primary" target="drive_thru_menu.html">Calculate Total</button>
-    </main>
-    <script src="drive_thru_menu.js"></script>
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4"
-      crossorigin="anonymous"
-    ></script>
-  </body>
+        <div class="form-group">
+            <label for="fries">Number of Fries ($2 each):</label>
+            <input type="number" id="fries" class="form-control" value="">
+        </div>
+        <div class="form-group">
+            <label for="sodas">Number of Sodas ($2.50 each):</label>
+            <input type="number" id="sodas" class="form-control" value="">
+            </div>
+        
+    </form>
+    <div class="order-summary" id="orderSummary">
+      <button type="button" class="btn btn-primary" id="btnClick">Calculate Total</button>
+    </div>
+</div>
+
+<script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+  crossorigin="anonymous"></script>
+</body>
 </html>

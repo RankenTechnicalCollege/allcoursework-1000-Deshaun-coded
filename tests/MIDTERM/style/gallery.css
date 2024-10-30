@@ -33,3 +33,10 @@ body{
       height: auto; 
   }
 }
+
+.list-group-item{
+  display: flex;
+  text-align: center;
+  justify-content: center;
+
+}

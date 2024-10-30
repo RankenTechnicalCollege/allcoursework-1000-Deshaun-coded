@@ -29,7 +29,7 @@
           let interest = (futureValue += (futureValue * rate) / 100);
 
           //write results
-          document.write(`<p> year=${i} Interest=${interest.toFixed(2)}Value=${futureValue.toFixed(2)}</P>`);
+          document.write(`<p> year=${i} Interest=${interest.toFixed(2)} Value= ${futureValue.toFixed(2)}</P>`);
         }
         again = prompt(' Repeat entries? (y/n)', 'y');
       } while (again === 'y');

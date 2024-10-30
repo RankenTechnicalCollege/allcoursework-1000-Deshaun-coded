@@ -29,7 +29,7 @@ if (scores.length > 0) {
   for (let i in scores) {
     console.log('in the for loop');
     total = total+scores[i];
-    document.write(`<p>Score ${parseFloat(i)+1}:${scores[i]}</p>`);
+    document.write(`<p>Score ${parseFloat(i)+1}: ${scores[i]}</p>`);
   }
 
   //calculate and display average score
