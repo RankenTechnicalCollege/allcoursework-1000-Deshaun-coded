@@ -23,24 +23,23 @@ do {
 } while (score != -1);
 
 if (scores.length > 0) {
-  console.log('above the for in loop');
+  //console.log('above the for in loop');
   //use a for-in loop to add each score to total and display it
   let total = 0;
   for (let i in scores) {
-    console.log('in the for loop');
+    //console.log('in the for loop');
     total = total+scores[i];
     document.write(`<p>Score ${parseFloat(i)+1}: ${scores[i]}</p>`);
   }
 
+  var max= Math.max(scores[i])
   //calculate and display average score
   const average = parseFloat(total/scores.length);
   document.write(`<p> Average score is ${average}</p>`);
+  document.write(`<p> Highest score is ${max}</p>`)
+  
+  } 
 
-  let highestScore = 0
+  let userEntry = 461.95;
 
-  for (const score of scores ){
-    if(score > highestScore)
-
-      document.write(`<p>Highest score is ${highestScore}</p>`)
-  }
-} 
+userEntry = parseInt(userEntry);

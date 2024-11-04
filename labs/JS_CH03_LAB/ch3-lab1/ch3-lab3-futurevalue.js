@@ -30,6 +30,13 @@
 
           
         }
+
+        
+        const birthday = new Date();
+
+        	
+document.write(birthday.toDateString());
+
       //write results
       document.write(`<h4>Future Value with Yearly Interest</h4>`)
 
