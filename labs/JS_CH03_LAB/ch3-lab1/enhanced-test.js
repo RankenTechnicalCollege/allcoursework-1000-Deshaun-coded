@@ -5,7 +5,7 @@
 const scores = [];
 
 let score = 0;
-
+let highscore =0;
 //use do while-loop get scores from the user and store in the array
 
 do {
@@ -15,6 +15,10 @@ do {
   // if it's valid, add to total/scores array, and display score
   if (score >= 0 && score <= 100) {
      scores[scores.length]=score ;
+     
+     if( scores[i] > highscore ){
+      highscore=scores[i];
+     }
      
   }
   // if user isn't ending scores, notify them of invalid data
@@ -32,6 +36,7 @@ if (scores.length > 0) {
     //console.log('in the for loop');
     total = total+scores[i];
     document.write(`<p>Score ${parseFloat(i)+1}: ${scores[i]}</p>`);
+    document.write(`<p>Score ${highscore}</p>`);
     
   }
 
