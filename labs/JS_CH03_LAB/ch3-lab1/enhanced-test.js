@@ -2,7 +2,7 @@
 
 //initialize total variable
 
-const scores = []; 
+const scores = [];
 
 let score = 0;
 
@@ -12,9 +12,10 @@ do {
   // get a score from the user
   score = parseFloat(prompt("Enter a test score, or enter -1 to end scores.", -1));
 
-  // if it's valid, add to total, increment count, and display score
+  // if it's valid, add to total/scores array, and display score
   if (score >= 0 && score <= 100) {
-    scores[scores.length] = score;
+     scores[scores.length]=score ;
+     
   }
   // if user isn't ending scores, notify them of invalid data
   else if (score != -1) {
@@ -23,24 +24,25 @@ do {
 } while (score != -1);
 
 if (scores.length > 0) {
-  console.log('above the for in loop');
+  //console.log('above the for in loop');
   //use a for-in loop to add each score to total and display it
+  
   let total = 0;
   for (let i in scores) {
-    console.log('in the for loop');
+    //console.log('in the for loop');
     total = total+scores[i];
     document.write(`<p>Score ${parseFloat(i)+1}: ${scores[i]}</p>`);
+    
   }
+
+  
+
 
   //calculate and display average score
   const average = parseFloat(total/scores.length);
   document.write(`<p> Average score is ${average}</p>`);
+  document.write(`<p> Highest score is ${Math.max.apply(scores.[])}</p>`);
+  
+}
 
-  let highestScore = 0
 
-  for (const score of scores ){
-    if(score > highestScore)
-
-      document.write(`<p>Highest score is ${highestScore}</p>`)
-  }
-} 
