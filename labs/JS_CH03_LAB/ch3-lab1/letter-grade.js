@@ -1,3 +1,19 @@
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 function GradeSCale(){
 
 let grade= document.getElementById('input').value;

@@ -41,7 +41,7 @@ if (scores.length > 0) {
   //calculate and display average score
   const average = parseFloat(total/scores.length);
   document.write(`<p> Average score is ${average}</p>`);
-  document.write(`<p> Highest score is ${Math.max.apply(scores.[])}</p>`);
+  document.write(`<p> Highest score is ${Math.max.apply(scores)}</p>`);
   
 }
 

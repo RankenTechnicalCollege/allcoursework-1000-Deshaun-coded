@@ -1,15 +1,67 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>Letter Grade</title>
 </head>
+
 <body>
-  <h1>Grade Scale</h1>
-  Enter your numerical grade.<br>
-  <script src="letter-grade.js"></script>
-  <input type="text" id="input">
-  <button onclick="GradeScale()"> What's My Letter Grade?</button>
+  <h2>Show letter Grade</h2>
+
+
+  <script>
+    const scores = [];
+    let numericGrade = 0
+
+    do {
+      numericGrade = parseInt(prompt("Enter number grade from 0 through 100 or enter 999 to end entries.", 999));
+
+      if (numericGrade >= 90) {
+        scores[scores.length]=numericGrade;
+        document.write(`<p>Grade ${numericGrade}= A </p>`);
+
+      } else if (numericGrade >= 80) {
+        document.write(`<p>Grade ${numericGrade}= B </p>`);
+        scores[scores.length]=numericGrade
+
+      } else if (numericGrade >= 70) {
+        document.write(`<p>Grade ${numericGrade}= C </p>`);
+        scores[scores.length]=numericGrade
+      } else if (numericGrade >= 60) {
+        document.write(`<p>Grade ${numericGrade}= D </p>`);
+        scores[scores.length]=numericGrade
+
+
+      } else if (numericGrade <= 59) {
+        document.write(`<p>Grade ${numericGrade}= F  </p>`);
+        scores[scores.length]=numericGrade
+
+      }
+      else if (numericGrade >= 999 || numericGrade <= -1) {
+        alert('Score must be Valid number from 0 through 100.');
+      }
+    } while (numericGrade >= 999 || numericGrade <= -1);
+
+    if (scores.length > 0) {
+  //console.log('above the for in loop');
+  //use a for-in loop to add each score to total and display it
+  
+ 
+  for (let i in scores) {
+    //console.log('in the for loop');
+  
+    document.write(`<p>Score ${parseFloat(i)+1}: ${scores[i]}</p>`);
+    
+  }
+
+}
+
+
+  </script>
+
+
 </body>
+
 </html>
