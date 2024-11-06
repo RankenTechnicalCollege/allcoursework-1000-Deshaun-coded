@@ -16,9 +16,7 @@ do {
   if (score >= 0 && score <= 100) {
      scores[scores.length]=score ;
      
-     if( scores[i] > highscore ){
-      highscore=scores[i];
-     }
+     
      
   }
   // if user isn't ending scores, notify them of invalid data
@@ -35,8 +33,13 @@ if (scores.length > 0) {
   for (let i in scores) {
     //console.log('in the for loop');
     total = total+scores[i];
-    document.write(`<p>Score ${parseFloat(i)+1}: ${scores[i]}</p>`);
-    document.write(`<p>Score ${highscore}</p>`);
+    
+    if( scores[i] > highscore ){
+      highscore=scores[i];
+     }
+    
+     document.write(`<p>Score ${parseFloat(i)+1}: ${scores[i]}</p>`);
+    
     
   }
 
@@ -46,7 +49,7 @@ if (scores.length > 0) {
   //calculate and display average score
   const average = parseFloat(total/scores.length);
   document.write(`<p> Average score is ${average}</p>`);
-  document.write(`<p> Highest score is ${Math.max.apply(scores)}</p>`);
+  document.write(`<p> Highest score is ${highscore}</p>`);
   
 }
 
