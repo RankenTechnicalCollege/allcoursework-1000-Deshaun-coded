@@ -1,0 +1,23 @@
+{
+    "editor.tabSize": 2,
+    "npm.enableRunFromFolder": true,
+    "npm.scriptExplorerAction": "run",
+    "npm.scriptExplorerExclude": [
+        ""
+    ],
+    "github.experimental.multipleAccounts": true,
+    "prettier.printWidth": 120,
+    "prettier.singleQuote": true,
+    "[html]": {
+        "editor.defaultFormatter": "vscode.html-language-features"
+    },
+    "liveServer.settings.fullReload": true,
+    "files.autoSave": "afterDelay",
+    "[javascript]": {
+        "editor.defaultFormatter": "HookyQR.beautify"
+    },
+    "editor.stickyScroll.enabled": false,
+    "json.trace.server": "messages",
+    "liveServer.settings.ChromeDebuggingAttachment": true,
+    "liveServer.settings.port": 0
+}

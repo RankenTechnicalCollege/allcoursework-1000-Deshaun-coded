@@ -19,7 +19,7 @@
         do {
           years = parseInt(prompt('Enter number of years', 10));
         } while (isNaN(years) || years <= 0);
-
+        
         //write entries
 
         document.write(`<h4> investment amount = ${investment} interest rate = ${rate} Years = ${years}</h4>`);
