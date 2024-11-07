@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Average Calculator</title>
+</head>
+    <body>
+
+    <script>
+        function calculateAverage() {
+            // Get values from the text boxes and convert them to numbers using parseFloat()
+            let num1 = parseFloat(document.getElementById('num1').value);
+            let num2 = parseFloat(document.getElementById('num2').value);
+            let num3 = parseFloat(document.getElementById('num3').value);
+            let num4 = parseFloat(document.getElementById('num4').value);
+            let num5 = parseFloat(document.getElementById('num5').value);
+
+            // Calculate the average of the five numbers
+            let average = (num1 + num2 + num3 + num4 + num5) / 5;
+
+            // Display the result in the paragraph with the id 'result'
+            document.getElementById('result').innerText = 'Average: ' + average.toFixed(2);
+        }
+    </script>
+
+
+    <h1>Calculate the Average of Five Numbers</h1>
+
+    <!-- Text boxes for the five numbers -->
+    <label for="num1">Number 1: </label><input type="text" id="num1" value="0"><br><br>
+    <label for="num2">Number 2: </label><input type="text" id="num2" value="0"><br><br>
+    <label for="num3">Number 3: </label><input type="text" id="num3" value="0"><br><br>
+    <label for="num4">Number 4: </label><input type="text" id="num4" value="0"><br><br>
+    <label for="num5">Number 5: </label><input type="text" id="num5" value="0"><br><br>
+
+
+    <!-- Paragraph to display the result -->
+    <p id="result"></p>
+
+
+      <!-- Button to trigger the average calculation -->
+      <button type="submit" onclick="calculateAverage()">Calculate Average</button>
+      <!-- Paragraph to display the result -->
+      <p id="result"></p>
+
+    <script>
+        function calculateShipping() {
+            // Get the purchase price entered by the user
+            let purchasePrice = parseFloat(document.getElementById('purchasePrice').value);
+            
+            // Initialize shipping variable
+            let shippingFee = 0;
+
+            // Apply shipping rules
+            if (purchasePrice <= 25.00) {
+                shippingFee = 1.50;  // Minimum shipping fee for purchases $25 or less
+            } else {
+                shippingFee = purchasePrice * 10 / 100;  // 10% shipping fee for purchases over $25
+            }
+
+            // Calculate the total cost (purchase price + shipping fee)
+            let totalCost = purchasePrice + shippingFee;
+
+            // Display the total cost in an alert box
+            alert('Total cost (including shipping and handling): $' + totalCost.toFixed(2));
+        }
+    </script>
+
+
+    <h1>Shipping and Handling Fee Calculator</h1>
+
+    <label for="purchasePrice">Enter Purchase Price: $</label>
+    <input type="text" id="purchasePrice" value="0"><br><br>
+
+    <button type="submit" onclick="calculateShipping()">Calculate Total</button>
+
+    <h2>BMI Calculator</h2>
+    <script>
+        function calcBMI() {
+            // Get the weight and height values from the text boxes
+            let weight = parseFloat(document.getElementById('weight').value);
+            let height = parseFloat(document.getElementById('height').value);
+
+            // Check if the user has entered valid values for weight and height
+            if (isNaN(weight) || isNaN(height) || height <= 0 || weight <= 0) {
+                alert("Please enter valid positive numbers for weight and height.");
+                return;
+            }
+
+            // Calculate the BMI using the formula
+            let bmi = (weight * 703) / (height * height);
+
+            // Display the result in the BMI text box
+            document.getElementById('bmi').value = bmi.toFixed(2);  // Rounds the result to two decimal places
+        }
+    </script>
+
+    <h1>Body Mass Index (BMI) Calculator</h1>
+
+    <!-- Text boxes for weight and height, and a text box for the BMI result -->
+    <label for="weight">Weight (lbs): </label>
+    <input type="text" id="weight" value="200"><br><br>
+
+    <label for="height">Height (inches): </label>
+    <input type="text" id="height" value="72"><br><br>
+
+    <label for="bmi">BMI: </label>
+    <input type="text" id="bmi" value="0" readonly><br><br>
+
+    <!-- Button to trigger the BMI calculation -->
+    <button type="submit" onclick="calcBMI()">Calculate BMI</button>
+</body>
+</html>
+

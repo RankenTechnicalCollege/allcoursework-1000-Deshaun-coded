@@ -1,0 +1,87 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta charset="UTF-8">
+    <title>Future Value Calculator</title>
+    <link rel="stylesheet" href="future_value.css">
+</head>
+<body>
+
+<main>
+        <h1>Future Value Calculator</h1>
+
+        <label for="investment">Total Investment:</label>
+        <input type="text" id="investment">
+        <span id="investment_error">&nbsp;</span><br>
+
+        <label for="rate">Annual Interest Rate:</label>
+        <input type="text" id="annual_rate">
+        <span id="rate_error">&nbsp;</span><br>
+
+        <label for="years">Number of Years:</label>
+        <input type="text" id="years">
+        <span id="years_error">&nbsp;</span><br>
+
+        <label for="future_value">Future Value:</label>
+        <input type="text" id="future_value" disabled><br>
+
+        <label>&nbsp;</label>
+        <input type="button" id="calculate" value="Calculate"><br>
+    </main>
+</body>
+
+  <script>
+    var $ = function(id) {
+    return document.getElementById(id);
+};
+
+var calculateFV = function(investment,rate,years) {
+	var futureValue = investment;
+    for (var i = 1; i <= years; i++ ) {
+		futureValue += futureValue * rate / 100;
+    }
+    futureValue = futureValue.toFixed(2);
+	return futureValue;
+};
+
+var processEntries = function() {
+    var investment = parseFloat( $("investment").value );
+    var rate = parseFloat( $("annual_rate").value );
+    var years = parseInt( $("years").value );
+	var allValid = true;
+	
+	if (isNaN(investment) || investment <= 0 || investment > 100000) {
+		$("investment_error").firstChild.nodeValue = "Must be > 0 and <= 100000";
+		allValid = false;
+	}
+	else {
+		$("investment_error").firstChild.nodeValue = "";
+	}
+	if (isNaN(rate) || rate <= 0 || rate > 15) {
+		$("rate_error").firstChild.nodeValue = "Must be > 0 and <= 15";
+		allValid = false;
+	}
+	else {
+		$("rate_error").firstChild.nodeValue = "";
+	}
+	if (isNaN(years) || years <= 0 || years > 50) {
+		$("years_error").firstChild.nodeValue = "Must be > 0 and <= 50";
+		allValid = false;
+	}
+	else {
+		$("years_error").firstChild.nodeValue = "";
+	}
+	if (allValid) {
+		$("future_value").value	= calculateFV(investment,rate,years);
+	}
+};
+
+window.onload = function() {
+    $("calculate").onclick = processEntries;
+    $("investment").focus();
+};
+  </script>
+</body>
+</html>

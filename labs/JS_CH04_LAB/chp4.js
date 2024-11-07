@@ -12,7 +12,7 @@
        const  html=`<p><label>Miles: ${miles.toFixed(2)}</p>
                 <p><label>Gallons: ${gallons.toFixed(2)}</p>
                 <p><label>MPG: ${mpg.toFixed(2) }</p>`;
-            document.write(html);
+                document.write(html);
 
 
             let investment = 0;
