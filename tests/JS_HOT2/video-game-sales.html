@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!--
+       JavaScript
+ 
+       Author: 
+       Date:   
+ 
+       Filename: index.htm
+    -->
+    <link rel="stylesheet" href="styles.css">
+  <title>Video Game Sales</title>
+</head>
+<body>
+  <header>
+     <h1>
+        Hands-on Test Chapter 4
+     </h1>
+  </header>
+
+  <article>
+     <h2>Steam Game Sale</h2>
+     <form>
+        <input type="checkbox" id="item1" value="19.99">
+        <label for="item1">Counter Strike ($19.99)</label>
+        <input type="checkbox" id="item2" value="29.99">
+        <label for="item2">Dark Souls III ($29.99)</label>
+        <input type="checkbox" id="item3" value="13.49">
+        <label for="item3">Enter The Gungeon ($13.49)</label>
+        <input type="checkbox" id="item4" value="4.99">
+        <label for="item4">Hover Junkers ($4.99)</label>
+        <!--the value for Hover Junkers was set to 599 instead of 899-->
+        <input type="checkbox" id="item5" value="8.99">
+        <label for="item5">Good Robot ($8.99)</label>
+        <button type="submit"  id="sButton" onclick="calcTotal()">Calculate Total</button>
+     </form>
+     <table>
+        <colgroup>
+           <col class="label">
+           <col class="amount">
+        </colgroup>
+        <tbody>
+           <tr>
+              <td>Item total</td>
+              <td>0.00</td>
+           </tr>
+           <tr>
+              <td>Tax</td>
+              <td>0.00</td>
+           </tr>
+           <tr>
+              <td>Total with tax</td>
+              <td>$0.00</td>
+           </tr>
+        </tbody>
+     </table>
+  </article>
+  <button type="submit" id="myBtn">Try it</button>
+  <p class="demo">Time</p>
+  <script>
+   "use strict";
+   // function to add values of selected check boxes and display total
+     function calcTotal() {
+        
+        var itemTotal = 0;
+        var tax = 0;
+        var totalWithTax = 0;
+        let items = document.getElementsByTagName("input");
+
+        //"td" and cells variable is not needed
+        
+
+        for (var i = 0; i < 3; i++) {
+           if (items[i].checked) {
+              itemTotal += (items[i].value * 1).toFixed(2);
+              tax = itemTotal * 0.05;
+       return totalWithTax = itemTotal + tax;
+       alert('Total cost (including shipping and handling): $' + totalWithTax.toFixed(2));
+        
+           } else{
+            
+           }
+        }
+        
+
+        
+     }
+     
+     // add event listener to Submit button
+     var submitButton = document.getElementById("sButton");
+     $("submit_button").addEventListener(calcTotal());
+
+   
+     // there was a missing quote
+     
+
+     document.getElementById("sButton").addEventListener("click", displayDate);
+     
+     function displayDate() {
+  document.getElementById("demo").innerHTML = Date();
+}
+   
+  </script>
+
+
+</body>
+</html>
