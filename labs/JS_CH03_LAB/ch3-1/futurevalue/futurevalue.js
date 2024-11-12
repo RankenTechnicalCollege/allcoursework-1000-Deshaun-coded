@@ -31,14 +31,23 @@
           
         }
 
-        
-        const birthday = new Date();
 
+        futureValue=futureValue.toFixed(2)
+        
+        
+        
         	
-document.write(birthday.toDateString());
+
 
       //write results
       document.write(`<h4>Future Value with Yearly Interest</h4>`)
+
+      document.write(`<p><label>Investment amount:</label> ${investment}</p>`);
+      document.write(`<p><label>Interest rate:</label> ${rate}</p>`);
+      document.write(`<p><label>Years:</label> ${years}</p>`);
+      document.write(`<p><label>Future Values:</label> ${futureValue}</p>`);
+
+      document.write(`<h4>Future Value with Monthly Interest</h4>`)
 
       document.write(`<p><label>Investment amount:</label> ${investment}</p>`);
       document.write(`<p><label>Interest rate:</label> ${rate}</p>`);
