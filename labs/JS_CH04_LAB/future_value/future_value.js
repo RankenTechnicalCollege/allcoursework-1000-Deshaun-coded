@@ -12,6 +12,7 @@ const calculateFV = (investment, rate, years) => {
     return futureValue;
 };
 
+
 document.addEventListener("DOMContentLoaded", () => {
     
     $("#calculate").addEventListener("click", evt => {

@@ -1,3 +1,5 @@
+"use strict"
+
 {
     "editor.tabSize": 2,
     "npm.enableRunFromFolder": true,
