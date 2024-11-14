@@ -1,5 +1,13 @@
 "use strict";
 
+const showMessage= () => {
+    const msg = "The DOM is ready!";
+    alert(msg);
+
+    
+}
+document.addEventListener("DOMContentLoaded", showMessage)
+
 const $ = selector => document.querySelector(selector);
 
 const isInvalidValue = val => isNaN(val) || val <= 0;

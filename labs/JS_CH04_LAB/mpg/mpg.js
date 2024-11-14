@@ -26,10 +26,12 @@ const processEntries = () => {
     }
 };
 
+
 document.addEventListener("DOMContentLoaded", () => {
     $("#calculate").addEventListener("click", processEntries);
     $("#mpg").focus();
 });
+
 
 const clearEntries =() => {
     $("#miles").value ="";
@@ -39,14 +41,21 @@ const clearEntries =() => {
     $("#miles").focus();
 
 }
+const milesDblclick= () => {
+    ("#miles").value="";$("miles").focus();}
 
 document.addEventListener("DOMContentLoaded", () => {
     $("#reset").addEventListener("click", clearEntries );
-    $("miles").focus();
+    
 
 
-    if ($("#miles").value>=0){
-        ("#miles").addEventListener("ondblclick", clearEntries);
-    $("#miles").focus();}
+    $("#miles").addEventListener("dblclick",milesDblclick);
+    
+  
  });
 
+
+
+
+   
+ 
