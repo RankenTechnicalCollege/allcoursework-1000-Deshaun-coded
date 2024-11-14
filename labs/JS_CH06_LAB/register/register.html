@@ -4,17 +4,13 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <link rel="stylesheet" href="register.js">
+  
   <title>Register</title>
 </head>
-
 <body>
   <h1>Register for an Account</h1>
-  <script>
-    alert(document.title); // displays "Hello World!"
-      document.title = "Goodbye World!";
-      alert(document.title); // displays "Goodbye World!"
-  </script>
+   
+  <input type="text" id="message" value="">
   
   <form action="register_account.html" method="get">
     <div>
@@ -42,11 +38,15 @@
       <input type="radio" name="contact" id="text" value="text" checked>Text
       <input type="radio" name="email" id="email" value="email">Email
       <input type="radio" name="contact" id="none" value="none">Don't contact me
+      <input type="radio" name="Mobile Phone" id="">
     </div>
     <div>
       <label>Terms of Service:</label>
       <input type="checkbox" name="terms" id="terms" value="yes">I accept
       <label>&nbsp;</label><span>*</span>
+    </div>
+    <div>
+      <input type="text">
     </div>
     <div>
       <label>&nbsp;</label>
@@ -55,6 +55,7 @@
     </div>
 
   </form>
+  <script src="register.js"></script>
 </body>
 
 </html>
