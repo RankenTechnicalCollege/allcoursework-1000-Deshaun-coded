@@ -27,32 +27,35 @@ const processEntries = () => {
 };
 
 
-document.addEventListener("DOMContentLoaded", () => {
-    $("#calculate").addEventListener("click", processEntries);
-    $("#mpg").focus();
-});
-
-
-const clearEntries =() => {
+let clearEntries =() => {
     $("#miles").value ="";
     $("#gallons").value="";
     $("#mpg").value="";
 
-    $("#miles").focus();
+    $("#miles").focus();}
 
-}
 const milesDblclick= () => {
-    ("#miles").value="";$("miles").focus();}
+    ("#miles").value = "";$("miles").focus();}
+
+    console.log(milesDblclick)
 
 document.addEventListener("DOMContentLoaded", () => {
+
+    $("#calculate").addEventListener("click", processEntries);
+    $("#mpg").focus();
     $("#reset").addEventListener("click", clearEntries );
     
 
 
-    $("#miles").addEventListener("dblclick",milesDblclick);
+    $("#miles").addEventListener("click",milesDblclick);
     
   
  });
+
+
+
+
+
 
 
 
