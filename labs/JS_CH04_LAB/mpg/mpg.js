@@ -31,11 +31,6 @@ document.addEventListener("DOMContentLoaded", () => {
     $("#mpg").focus();
 });
 
-document.addEventListener("DOMContentLoaded", () => {
-    $("#reset").addEventListener("click", clearEntries );
-    $("miles").focus();
-});
-
 const clearEntries =() => {
     $("#miles").value ="";
     $("#gallons").value="";
@@ -44,3 +39,14 @@ const clearEntries =() => {
     $("#miles").focus();
 
 }
+
+document.addEventListener("DOMContentLoaded", () => {
+    $("#reset").addEventListener("click", clearEntries );
+    $("miles").focus();
+
+
+    if ($("#miles").value>=0){
+        ("#miles").addEventListener("ondblclick", clearEntries);
+    $("#miles").focus();}
+ });
+

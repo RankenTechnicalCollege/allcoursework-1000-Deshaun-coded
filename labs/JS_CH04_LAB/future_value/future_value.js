@@ -3,7 +3,7 @@
 const $ = selector => document.querySelector(selector);
 
 const isInvalidValue = val => isNaN(val) || val <= 0;
-
+//create the calculator
 const calculateFV = (investment, rate, years) => {
     let futureValue = investment;
     for (let i = 1; i <= years; i++ ) {
@@ -12,6 +12,9 @@ const calculateFV = (investment, rate, years) => {
     return futureValue;
 };
 
+const processEntries = () => {
+    
+}
 
 document.addEventListener("DOMContentLoaded", () => {
     
@@ -55,3 +58,7 @@ document.addEventListener("DOMContentLoaded", () => {
     // set focus on first text box on initial load
     $("#investment").focus();
 });
+
+document.addEventListener("DOMContentLoaded", () => {
+
+})
