@@ -20,7 +20,5 @@ label {
 input {
     margin-left: 1em;
     margin-right: 0.5em;
-}
-span {
-    color: red;
+    width: 15em;
 }
