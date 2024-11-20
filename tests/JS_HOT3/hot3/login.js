@@ -5,10 +5,9 @@ const $ = selector => document.querySelector(selector);
 const processEntries = () => {
       const email = $("#email");
       const password = $("#password");
-      const terms = $("#terms");
+      
 
-      const element = document.getElementById("errorMessage");
-      element.style.color = "red";
+      
 
       document.getElementById("loginForm").addEventListener("submit", function(event) {
         event.preventDefault();  // Prevent the form from submitting
@@ -26,6 +25,8 @@ const processEntries = () => {
             // Show error message if credentials are incorrect
             document.getElementById("errorMessage")
             errorMessage.textContent = "That email and password doesn't seem to be right. Try again.";
+            const element = document.getElementById("errorMessage");
+            element.style.color = "red";
         } 
     });
 
@@ -48,10 +49,14 @@ const processEntries = () => {
       }else{
             password.nextElementSibling.textContent = "";
       }
+
+      document.addEventListener("DOMContentLoaded", () => {
+            $("#register").addEventListener("click", processEntries);
+            $("#reset_form").addEventListener("click", resetForm);  
+            $("#email_address").focus();   
+        });
       
 
-      if (isValid==true){
-            $("form").submit()
-      }
+      
 
 }

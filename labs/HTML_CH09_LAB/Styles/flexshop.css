@@ -97,8 +97,8 @@ h1 , a:visited{
     background-color: gray;
 }
 
-.navbar-menu ,.navbar-menu {
-  display: flex;
+.navbar-menu .navbar-menu {
+  display: none;
   flex-direction: column;
   justify-content: flex-start;
   align-items: stretch;
