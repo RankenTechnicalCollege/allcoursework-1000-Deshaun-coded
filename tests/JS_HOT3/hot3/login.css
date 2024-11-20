@@ -1,0 +1,29 @@
+label{
+  
+  width: 5em;
+  text-align: right;
+  margin: 0em 0em 8em 0em
+}
+
+input{
+  margin-left: 1em;
+  margin-bottom:1em;
+  width: 10em;
+}
+
+#phonenumber{
+  margin-bottom:.4em;
+}
+
+#confirmemail{
+  margin-bottom:1.9em;
+}
+
+form{
+
+  font-size: x-small;
+}
+
+#one{
+  
+}
