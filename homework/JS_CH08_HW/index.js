@@ -1,0 +1,1 @@
+$('.container').find('.text1').css()
