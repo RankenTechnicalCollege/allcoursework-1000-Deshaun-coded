@@ -6,18 +6,18 @@
       //get interest rate amount- loop until user enters a number
       do 
         {
-          rate = parseFloat(prompt('Enter interest rate amount as xxxxx.xx', 7.5));
+          rate = parseFloat(prompt('Enter interest rate amount as xxxxx.xx', ));
         }
         while (isNaN(rate) || rate <= 0);
 
         //get investment amount- loop until user enters a number
         do {
-          investment = parseFloat(prompt('Enter investment amount as xxxxx.xx', 10000));
+          investment = parseFloat(prompt('Enter investment amount as xxxxx.xx', ));
         } while (isNaN(investment) || investment <= 0);
 
         //get number of years to prompt until a number is entered
         do {
-          years = parseInt(prompt('Enter number of years', 10));
+          years = parseInt(prompt('Enter number of years', ));
         } while (isNaN(years) || years <= 0);
         
         //write entries
