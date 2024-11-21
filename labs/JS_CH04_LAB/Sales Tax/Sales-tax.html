@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Sales Tax</title>
+</head>
+</head>
+
+<body>
+    <main>
+        <h1>The Future Value Calculator</h1>
+        <div>
+            <label for="investment">Total Investment:</label>
+            <input type="text" id="investment">
+        </div>
+
+        <div>
+            <label for="rate">Annual Interest Rate:</label>
+            <input type="text" id="rate">
+        </div>
+
+        <div>
+            <label for="years">Number of Years:</label>
+            <input type="text" id="years">
+        </div>
+
+        <div>
+            <label for="future_value">Future Value:</label>
+            <input type="text" id="future_value" disabled>
+        </div>
+
+        <div>
+            <label>&nbsp;</label>
+            <input type="button" id="calculate" value="Calculate Future Value">
+        </div>
+    </main>
+
+  <script>
+    "use strict";
+
+const $ = selector => document.querySelector(selector);
+
+function isInvalidValue(value) {
+  if (subtotal > 0 && subtotal < 10000) {
+    return true;
+  }
+  else {
+    return false;
+  }
+
+  if(Tax_Rate > 0 && Tax_Rate < 12)
+}
+//create the calculator
+
+
+const processEntries = () => {
+  //get values user entered in textboxes
+  const Subtotal = parseFloat($("#investment").value);
+  const Tax_Rate = parseFloat($("#rate").value);
+  const Sales_Tax = parseInt($("#years").value);
+
+  let errorMsg = "";
+
+  //check user entries for errors or invalid inputs
+  if (isInvalidValue(investment)) {
+    errorMsg += "Interest rate must be a valid number greater than zero.\n"
+    $("#investment").focus();
+  }
+
+  if (isInvalidValue(rate)) {
+    errorMsg += "Interest rate must be a valid number greater than zero.\n";
+    $("#rate").focus();
+  }
+
+  if (isInvalidValue(years)) {
+    errorMsg += "Number of years must be a valid number greater than zero.";
+    $("#years").focus();
+  }
+
+  if (errorMsg == "") {
+    $("#future_value").value = `${calculatetotal(investment,rate,years)}`
+  } else {
+    //display error message
+    alert(errorMsg);
+  }
+  // set focus on first text box on initial load
+  $("#investment").focus();
+};
+
+const calculatetotal = (investment, rate, years) => {
+  let futureValue = investment;
+        for (let i = 1; i <= years; i++) {
+          let interest = futureValue += futureValue * rate / 100;
+
+          
+        }
+  
+  return futureValue.toFixed(2);
+};
+
+document.addEventListener("DOMContentLoaded", () => {
+  $("#calculate").addEventListener("click", calculatetotal);
+  // clear any previous calculation
+  $("#future_value").value = "";
+})
+  </script>
+</body>
+</html>

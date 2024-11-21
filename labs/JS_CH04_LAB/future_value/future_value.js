@@ -1,19 +1,17 @@
 "use strict";
 
-
 const $ = selector => document.querySelector(selector);
 
-const isInvalidValue= val=> isNaN (val) || val <= 0;
+function isInvalidValue(value) {
+  if (value == NaN || value <= 0) {
+    return true;
+  }
+  else {
+    return false;
+  }
+}
 //create the calculator
-const calculateFV= (investment, rate, years)=> {
-  let futureValue = investment;
-        for (let i = 1; i <= years; i++) {
-          let interest = futureValue += futureValue * rate / 100;
 
-          
-        }
-  return futureValue.toFixed(2);
-};
 
 const processEntries = () => {
   //get values user entered in textboxes
@@ -21,25 +19,27 @@ const processEntries = () => {
   const rate = parseFloat($("#rate").value);
   const years = parseInt($("#years").value);
 
-
-
   let errorMsg = "";
 
   //check user entries for errors or invalid inputs
-  if (isInvalidValue(investment)){
-    errorMsg+= "Interest rate must be a valid number greater than zero.\n"
+  if (isInvalidValue(investment)) {
+    errorMsg += "Interest rate must be a valid number greater than zero.\n"
     $("#investment").focus();
   }
 
-  if (isInvalidValue(rate)){
+  if (isInvalidValue(rate)) {
     errorMsg += "Interest rate must be a valid number greater than zero.\n";
     $("#rate").focus();
   }
 
-  if (isInvalidValue(years)){
+  if (isInvalidValue(years)) {
     errorMsg += "Number of years must be a valid number greater than zero.";
     $("#years").focus();
-  } else{
+  }
+
+  if (errorMsg == "") {
+    $("#future_value").value = `${calculateFV(investment,rate,years)}`
+  } else {
     //display error message
     alert(errorMsg);
   }
@@ -47,12 +47,19 @@ const processEntries = () => {
   $("#investment").focus();
 };
 
+const calculateFV = (investment, rate, years) => {
+  let futureValue = investment;
+        for (let i = 1; i <= years; i++) {
+          let interest = futureValue += futureValue * rate / 100;
 
+          
+        }
+  
+  return futureValue.toFixed(2);
+};
 
-document.addEventListener("DOMContentLoaded", ()=>{
-
-  $("#calculate").addEventListener("click", processEntries ,calculateFV);
-    // clear any previous calculation
-    $("#future_value").value="";
-
-  })
+document.addEventListener("DOMContentLoaded", () => {
+  $("#calculate").addEventListener("click", processEntries);
+  // clear any previous calculation
+  $("#future_value").value = "";
+})
