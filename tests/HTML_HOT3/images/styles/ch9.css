@@ -69,19 +69,6 @@ main{
   border: solid black;
   width:auto ;
   justify-content: space-between;
-  flex-direction: column;
-}
-
-.bottom{
-  display: flex;
-  border: solid black;
-  justify-content: space-between;
-  border: none;
-  margin: 20px 0px 0px 0px;
-}
-
-.bottom > img{
-  border-radius: 0px
 }
 
 footer{
@@ -90,7 +77,7 @@ footer{
 }
 
 
-.top{
+img{
   border-radius: 30px ;
 }
 
