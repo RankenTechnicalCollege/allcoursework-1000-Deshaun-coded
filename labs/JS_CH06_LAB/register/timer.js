@@ -18,7 +18,8 @@ const updateCounter = () => {
 
     count--;
 
-};
+};  
+
 
 
 

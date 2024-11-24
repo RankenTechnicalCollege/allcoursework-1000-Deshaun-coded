@@ -56,9 +56,9 @@ function isInvalidValue(value) {
 
 const processEntries = () => {
   //get values user entered in textboxes
-  const Subtotal = parseFloat($("#investment").value);
-  const Tax_Rate = parseFloat($("#rate").value);
-  const Sales_Tax = parseInt($("#years").value);
+  const subtotal = parseFloat($("#investment").value);
+  const taxRate = parseFloat($("#rate").value);
+  const salesTax = parseInt($("#years").value);
 
   let errorMsg = "";
 
@@ -79,7 +79,7 @@ const processEntries = () => {
   }
 
   if (errorMsg == "") {
-    $("#future_value").value = `${calculatetotal(investment,rate,years)}`
+    $("#future_value").value = `${calculateTotal(investment,rate,years)}`
   } else {
     //display error message
     alert(errorMsg);
@@ -88,7 +88,7 @@ const processEntries = () => {
   $("#investment").focus();
 };
 
-const calculatetotal = (investment, rate, years) => {
+const calculateTotal = (investment, rate, years) => {
   let futureValue = investment;
         for (let i = 1; i <= years; i++) {
           let interest = futureValue += futureValue * rate / 100;
@@ -100,7 +100,7 @@ const calculatetotal = (investment, rate, years) => {
 };
 
 document.addEventListener("DOMContentLoaded", () => {
-  $("#calculate").addEventListener("click", calculatetotal);
+  $("#calculate").addEventListener("click", calculateTotal);
   // clear any previous calculation
   $("#future_value").value = "";
 })
