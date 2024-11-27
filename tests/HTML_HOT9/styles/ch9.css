@@ -112,6 +112,46 @@ button > a{
   color: red;
 }
 
+@media screen and (min-width: 600px) and (max-width: 1200px){
+  section{
+    display: flex;
+    align-items: start;
+    flex-direction: column-reverse;
+  
+  }
+  button{
+    display: flex;
+    align-items: end;
+  }
+}
+
+@media screen and (min-width: 1200px){
+  .flex-container-2 ,ul,li{
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    
+  }
+
+  .bottom {
+    border: solid black;
+    display: flex;
+    
+    font-size: smaller;
+    padding: 90px 0px 0px 0px;
+  }
+
+  .boba{
+    display: flex;
+    
+  }
+
+  .oreo{
+    display: flex;
+    
+  }
+}
+
 
 
 
