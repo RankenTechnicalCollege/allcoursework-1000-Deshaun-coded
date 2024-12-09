@@ -36,88 +36,114 @@
             <input type="text" id="total" disabled>
         </div>
         <form action="sales-tax.html" method="get">
+
+          <div id="a">
         <div>
-            <label>&nbsp;</label>
-            <input type="button" id="calculate" value="Calculate">
-            <button class="btn btn-primary" type="reset">Reset</button>
+            <input type="button" id="calculateTax" value="Calculate">
+        </div>
+        <div>
+            <input type="button" id="reset" value="Reset">
+          </div>
         </div>
       </form>
     </main>
-<<<<<<< HEAD
 
   <script>
     "use strict";
 
 const $ = selector => document.querySelector(selector);
 
-function isInvalidValue(value) {
-  if (subtotal > 0 && subtotal < 10000) {
+
+//create the calculator
+
+
+const processEntries = () => {
+  //get values user entered in textboxes
+  const subTotal = parseFloat($("#subtotal").value);
+  const rate = parseFloat($("#rate").value);
+  let salesTax = parseInt($("#salestax").value);
+  const total= parseFloat($("#total"))
+
+  let errorMsg = "";
+
+  
+  function isInvalidValue(value) {
+  if (subTotal > 0 && subTotal < 10000) {
     return true;
   }
   else {
     return false;
   }
 
-  if(Tax_Rate > 0 && Tax_Rate < 12)
-}
-//create the calculator
-
-
-const processEntries = () => {
-  //get values user entered in textboxes
-  const subtotal = parseFloat($("#investment").value);
-  const taxRate = parseFloat($("#rate").value);
-  const salesTax = parseInt($("#years").value);
-
-  let errorMsg = "";
+  if(rate > 0 && rate < 12){
+  return true;
+    } 
+      else false;
+  };
+  
 
   //check user entries for errors or invalid inputs
-  if (isInvalidValue(investment)) {
+  if (isInvalidValue(subTotal)) {
     errorMsg += "Interest rate must be a valid number greater than zero.\n"
-    $("#investment").focus();
+    $("#subtotal").focus();
   }
 
   if (isInvalidValue(rate)) {
     errorMsg += "Interest rate must be a valid number greater than zero.\n";
     $("#rate").focus();
   }
-
-  if (isInvalidValue(years)) {
+ 
+  if (isInvalidValue(salesTax)) {
     errorMsg += "Number of years must be a valid number greater than zero.";
-    $("#years").focus();
+    $("#salestax").focus();
   }
 
   if (errorMsg == "") {
-    $("#future_value").value = `${calculateTotal(investment,rate,years)}`
+    $("#total").value = `${calculateTax(subTotal,rate,salesTax)}`
   } else {
     //display error message
     alert(errorMsg);
   }
   // set focus on first text box on initial load
-  $("#investment").focus();
+  $("#subtotal").focus();
 };
 
-const calculateTotal = (investment, rate, years) => {
-  let futureValue = investment;
-        for (let i = 1; i <= years; i++) {
-          let interest = futureValue += futureValue * rate / 100;
+const calculateTax = (subTotal,salesTax,rate) => {
+ 
+ salesTax = subTotal * (rate / 100);
+ total = subTotal + salesTax;
+ return total.toFixed(2);
+}
+
+//const calculateTax = (subtotal, rate, years) => {
+  //let futureValue = investment;
+      //  for (let i = 1; i <= years; i++) {
+      //    let interest = futureValue += futureValue * rate / 100;
 
           
-        }
+        //}
   
-  return futureValue.toFixed(2);
-};
+ // return futureValue.toFixed(2);
+
+
+
+let clearEntries =() => {
+  $("#subtotal").value ="";
+  $("#total").value="";
+  $("#salestax").value="";
+  $("#rate").value="";
+}
+
 
 document.addEventListener("DOMContentLoaded", () => {
-  $("#calculate").addEventListener("click", calculateTotal);
+  $("#calculate").addEventListener("click", calculateTax);
+  $("#subtotal").focus();
   // clear any previous calculation
-  $("#future_value").value = "";
+  $("#reset").addEventListener("click", clearEntries );
 })
   </script>
-=======
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
   integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
   crossorigin="anonymous"></script>
->>>>>>> fc64a02a234485388eec916a3001e20dae118b2c
 </body>
 </html>

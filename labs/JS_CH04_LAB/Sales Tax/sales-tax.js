@@ -42,6 +42,20 @@ const processEntries = () => {
     $("#rate").focus();
   }
 
+  if (isInvalidValue(years)) {
+    errorMsg += "Number of years must be a valid number greater than zero.";
+    $('#years').focus();
+  }
+
+  if (errorMsg == "") {
+    $("#future_value").value = `${calculateTotal(investment, rate, years)}`
+  } else {
+    //display error message
+    alert(errorMsg);
+  }
+  // set focus on first text box on initial load
+  $("#investment").focus();
+};
 
 
  
@@ -50,7 +64,7 @@ const processEntries = () => {
 
   // set focus on first text box on initial load
   $("#subtotal").focus();
-};
+;
 
 let clearEntries =() => {
   $("#subtotal").value ="";

@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="change_calculator.css">
+  <title>Change Maker</title>
+  <link rel="stylesheet" 
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css" 
+      integrity="sha384-+0n0xVW2eSR5OomGNYDnhzAbDsOXxcvSN1TPprVMTNDbiYZCxYbOOl7+AMvyTG2x"
+      crossorigin="anonymous">
+</head>
+<body>
+  <div >
+    <h2>Change Calculator</h2>
+    <div class="form">
+        <form>
+          
+            <label for="amount" class="form-label">Enter amount  of change due (0-99 cents):</label>
+            <input type="number" id="amount" class="form-control" min="0" max="99" placeholder="Enter amount">
+            <label>&nbsp;</label>
+          <input type="button" id="makeChangeBtn" value="Calculate"> 
+        </form>
+      </div>
+      
+      <div class=" ">
+        <!-- Output Fields for Quarters, Dimes, Nickels, Pennies -->
+        
+        <div>
+          <label>Quarters:</label>
+          <input type="text" id="quarters">
+        </div>
+        <div>
+          <label>Dimes:</label>
+          <input type="text" id="dimes">
+        </div>
+        <div>
+          <label>Nickels:</label>
+          <input type="text" id="nickels">
+        </div>
+        <div>
+          <label>Pennies:</label>
+          <input type="text" id="pennies">
+        </div>
+      </div>
+    </div>
+  </div>
+
+  
+
+  <script>
+    // This function is triggered when the "Make Change" button is clicked
+    function makeChange() {
+      // Get the user input
+      const amount = parseInt(document.getElementById('amount').value);
+
+      // Validate the amount entered
+      if (isNaN(amount) || amount < 0 || amount > 99) {
+        alert("Please enter a valid amount between 0 and 99.");
+        return;
+      }
+
+      // Initialize coin counts to 0
+      let quarters = 0;
+      let dimes = 0;
+      let nickels = 0;
+      let pennies = 0;
+
+      // Calculate the number of quarters
+      quarters = Math.floor(amount / 25);
+      let remainder = amount % 25;
+
+      // Calculate the number of dimes
+      dimes = Math.floor(remainder / 10);
+      remainder = remainder % 10;
+
+      // Calculate the number of nickels
+      nickels = Math.floor(remainder / 5);
+      remainder = remainder % 5;
+
+      // The remaining amount is in pennies
+      pennies = remainder;
+
+      // Update the output fields with the calculated values
+      document.getElementById('quarters').textContent = quarters;
+      document.getElementById('dimes').textContent = dimes;
+      document.getElementById('nickels').textContent = nickels;
+      document.getElementById('pennies').textContent = pennies;
+    }
+
+    // Event listener for DOMContentLoaded to attach the event handler
+    document.addEventListener('DOMContentLoaded', function() {
+      const makeChangeBtn = document.getElementById('makeChangeBtn');
+      makeChangeBtn.addEventListener('click', makeChange);
+    });
+  </script>
+
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.bundle.min.js" 
+  integrity="sha384-gtEjrD/SeCtmISkJkNUaaKMoLD0//ElJ19smozuHV6z3Iehds+3Ulb9Bn9Plx0x4" 
+  crossorigin="anonymous"></script>
+</body>
+</html>
