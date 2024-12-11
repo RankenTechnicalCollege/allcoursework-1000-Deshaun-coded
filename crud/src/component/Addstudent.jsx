@@ -1,5 +1,5 @@
 import React, {useState} from 'react'
-import './App.css'
+
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { nanoid } from 'nanoid';
 
@@ -19,7 +19,7 @@ const AddStudent = (props) => {
       'gradYear' : parseInt(gradYear),
       'image': URL.createObjectURL(selectedFile)
     }
-    props.AddStudent(newStudent)
+    props.addStudent(newStudent)
   }
 
 const imageUpdate = (event) => {

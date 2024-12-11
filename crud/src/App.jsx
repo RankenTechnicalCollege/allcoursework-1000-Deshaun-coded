@@ -2,9 +2,9 @@ import { useState, useEffect } from 'react'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import './App.css'
 import { nanoid } from 'nanoid'
-import _ from 'lodash';
-import Student from './Student';
-import AddStudent from './AddStudent'
+import _, { update } from 'lodash';
+import Student from './component/Student';
+import AddStudent from './component/Addstudent'
 
 function App() {
   const [allStudents, setAllStudents] = useState([]);
@@ -13,7 +13,17 @@ function App() {
   const [gradYear, setGradYear] = useState('');
 
   useEffect(() => {
-    saveStudents(students);
+    if(localStorage){
+      const studentsLocalStorage= JSON.parse(localStorage.getItem('students'));
+
+      if(studentsLocalStorage){
+        saveStudents(studentsLocalStorage);
+      }else{
+        saveStudents(students);
+      }
+
+    }
+
   }, []);
 
   const students = [{
@@ -99,6 +109,10 @@ function App() {
 const saveStudents = (students) => {
     setAllStudents(students);
     setSearchResults(students);
+    if(localStorage){
+      localStorage.setItem('students',JSON.stringify)
+      console.log('saved to local storage');
+    }
   };
 
   const addStudent = (newStudent) => {
@@ -107,8 +121,17 @@ const saveStudents = (students) => {
   }
 
   const removeStudent= (studentToDelete)=> {
-    console.table(student)
+    //console.table(studentToDelete);
+    const updatedStudentArray= allStudents.filter(student => student.id !== studentToDelete.id);
+    saveStudents(updatedStudentArray);
   }
+
+  const updateStudent= (updatedStudent) =>{
+  //console.table(updatedStudent);
+    const updatedStudentArray = allStudents.map(student => student.id === updatedStudent.id ? {...student, ...updatedStudent} : student)
+    saveStudents(updatedStudentArray)
+}
+
 
   const searchStudents = () => {
     let keywordsArray = [];
@@ -138,19 +161,15 @@ const saveStudents = (students) => {
         {searchResults &&
           searchResults.map((student) => (
             <div className='col-lg-2' key={student.id}>
+              <Student student={student} removeStudent={removeStudent} updateStudent={updateStudent}/>
               <div className='card'>
-                <img src={student.image} alt='Student' className='card-img-top mx-auto' />
-                <ul className='list-group list-group-flush'>
-                  <li className='list-group-item text-center'>{student.firstName}</li>
-                  <li className='list-group-item text-center'>{student.lastName}</li>
-                  <li className='list-group-item text-center'>{student.email}</li>
-                  <li className='list-group-item text-center'>{student.gradYear}</li>
-                </ul>
+                
+                
               </div>
             </div>
           ))}
       </div>
-<AddStudent addStudent={addStudent}/>
+{<AddStudent addStudent={addStudent}/>}
       <div className='row mt-4'>
         <div className='col-md-4'>
           <label htmlFor='txtKeywords'>Search by First or Last Name</label>
