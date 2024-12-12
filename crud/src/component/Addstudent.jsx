@@ -2,6 +2,9 @@ import React, {useState} from 'react'
 
 import 'bootstrap/dist/css/bootstrap.min.css'
 import { nanoid } from 'nanoid';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
+import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'
+import './AddStudent.css'
 
 const AddStudent = (props) => {
   const[firstName, setFirstName]=useState('');
@@ -27,8 +30,8 @@ const imageUpdate = (event) => {
 }
 
   return(
-    <div className='row'>
-      <div className='col-md-2'>
+    <div className='row mt-5' id='addStudent'>
+      <div className='row'>
       <label htmlFor='txtFirstName' className='form-label'>First Name</label>
       <input type='text' id='txtFirstName' placeholder='First Name' className='form-control' onChange={(event) => setFirstName(event.currentTarget.value)} value={firstName}/>
     </div>
@@ -53,7 +56,7 @@ const imageUpdate = (event) => {
 <input type='file' id='fileUpload' className='form-control'  onChange={imageUpdate} />
 </div>
 <div className='col-md-4' >
-<button type='button' className='btn btn-success btn-lg' id='btnAdd' onClick={doWork}>addStudent</button>
+<button type='button' className='btn btn-success btn-lg' id='btnAdd' onClick={doWork}>Add Student<FontAwesomeIcon icon={faPlusCircle}/></button>
 </div>
 
 </div>

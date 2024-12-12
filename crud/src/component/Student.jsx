@@ -1,5 +1,7 @@
+import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 import React from 'react'
 import {useState, useEffect} from 'react'
+import { faMagicWandSparkles, faWarning } from '@fortawesome/free-solid-svg-icons';
 
 
 
@@ -33,8 +35,8 @@ props.updateStudent(updateStudent);
                   <li className='list-group-item text-center'>{props.student.lastName}</li>
                   <li className='list-group-item text-center'>{props.student.email}</li>
                   <li className='list-group-item text-center'>{props.student.gradYear}</li>
-                  <button type='button' className='btn btn-danger' onClick={() => props.removeStudent(props.student)}>Delete Student</button>
-                  <button type='button' className='btn btn-warning' onClick={()=> setEditMode(true)}>Edit Student</button>
+                  <button type='button' className='btn btn-danger' onClick={() => props.removeStudent(props.student)}>Delete Student<FontAwesomeIcon icon={faWarning}/></button>
+                  <button type='button' className='btn btn-warning' onClick={()=> setEditMode(true)}>Edit Student <FontAwesomeIcon icon={faMagicWandSparkles}/></button>
                 </ul>
 }
 {editMode && <ul className='list-group list-group-flush'>

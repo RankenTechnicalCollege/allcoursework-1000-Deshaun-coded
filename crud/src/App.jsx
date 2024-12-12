@@ -5,6 +5,8 @@ import { nanoid } from 'nanoid'
 import _, { update } from 'lodash';
 import Student from './component/Student';
 import AddStudent from './component/Addstudent'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome' 
+import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
   const [allStudents, setAllStudents] = useState([]);
@@ -12,19 +14,17 @@ function App() {
   const [keywords, setKeyWords] = useState('');
   const [gradYear, setGradYear] = useState('');
 
-  useEffect(() => {
+  useEffect (() => {
     if(localStorage){
-      const studentsLocalStorage= JSON.parse(localStorage.getItem('students'));
+      const studentsLocalStorage = JSON.parse(localStorage.getItem("students"));
 
       if(studentsLocalStorage){
         saveStudents(studentsLocalStorage);
       }else{
         saveStudents(students);
       }
-
     }
-
-  }, []);
+}, []);
 
   const students = [{
     firstName: "Anna-diana",
@@ -107,11 +107,11 @@ function App() {
   }];
 
 const saveStudents = (students) => {
-    setAllStudents(students);
+    setAllStudents (students);
     setSearchResults(students);
     if(localStorage){
-      localStorage.setItem('students',JSON.stringify)
-      console.log('saved to local storage');
+      localStorage.setItem("students", JSON.stringify(students));
+      console.log("saved to local storage");
     }
   };
 
@@ -157,7 +157,8 @@ const saveStudents = (students) => {
 
  return (
     <div className='container'>
-      <div className='row'>
+      <div className='row' id='allStudents'>
+        <h3>Current Students</h3>
         {searchResults &&
           searchResults.map((student) => (
             <div className='col-lg-2' key={student.id}>
@@ -170,7 +171,8 @@ const saveStudents = (students) => {
           ))}
       </div>
 {<AddStudent addStudent={addStudent}/>}
-      <div className='row mt-4'>
+      <div className='row mt-4'id='searchStudents'>
+        <h3>Search Students</h3>
         <div className='col-md-4'>
           <label htmlFor='txtKeywords'>Search by First or Last Name</label>
           <input
@@ -199,13 +201,13 @@ const saveStudents = (students) => {
               ))
               .value()}
           </select>
-        </div>
-        <div className='col-md-4'>
-          <button type='button' className='btn btn-lg btn-primary' onClick={searchStudents}>
-            Search Students
-          </button>
+        
+        <div className='col-md-4 mt-3'>
+        <div></div>
+          <button type='button' className='btn btn-lg btn-primary' onClick={searchStudents}>Search Students <FontAwesomeIcon icon={faSearch}/></button>
         </div>
       </div>
+    </div>
     </div>
   );
 }
