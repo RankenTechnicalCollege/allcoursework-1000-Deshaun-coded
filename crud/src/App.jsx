@@ -1,11 +1,11 @@
-import { useState, useEffect } from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './App.css'
-import { nanoid } from 'nanoid'
-import _, { update } from 'lodash';
+import { useState, useEffect } from 'react';
 import Student from './component/Student';
-import AddStudent from './component/Addstudent'
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome' 
+import AddStudent from './component/AddStudent';
+import './App.css';
+import 'bootstrap/dist/css/bootstrap.min.css';
+
+import _ from 'lodash';
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
 
 function App() {
@@ -14,9 +14,9 @@ function App() {
   const [keywords, setKeyWords] = useState('');
   const [gradYear, setGradYear] = useState('');
 
-  useEffect (() => {
+  useEffect(() => {
     if(localStorage){
-      const studentsLocalStorage = JSON.parse(localStorage.getItem("students"));
+      const studentsLocalStorage = JSON.parse(localStorage.getItem('students'));
 
       if(studentsLocalStorage){
         saveStudents(studentsLocalStorage);
@@ -24,192 +24,169 @@ function App() {
         saveStudents(students);
       }
     }
-}, []);
-
-  const students = [{
-    firstName: "Anna-diana",
-    lastName: "Orhtmann",
-    email: "aorhtmann0@upenn.edu",
-    image: "images/student1.jpg",
-    gradYear: 2024
-  },
-  {
-    id: nanoid(),
-    firstName: "Genevra",
-    lastName: "Pollie",
-    email: "gpollie1@jigsy.com",
-    image: "images/student2.jpg",
+   
+  }, []);
+  
+  const students= [{
+    id: ,
+    firstName: "Regine",
+    lastName: "January",
+    email: "rjanuary0@1und1.de",
+    image: "/images/student1.jpg",
+    gradYear: 2024 
+  }, {
+    id: ,
+    firstName: "Livvie",
+    lastName: "Martinat",
+    email: "lmartinat1@w3.org",
+    image: "/images/student2.jpg",
     gradYear: 2025
-  },
-  {
-    id: nanoid(),
-    firstName: "Maxwell",
-    lastName: "Oller",
-    email: "moller2@fastcompany.com",
-    image: "images/student3.jpg",
+  }, {
+    id: ,
+    firstName: "Terrence",
+    lastName: "Croal",
+    email: "tcroal2@illinois.edu",
+    image: "/images/Octopimp.jpg",
     gradYear: 2026
-  },
-  {
-    id: nanoid(),
-    firstName: "Lorianna",
-    lastName: "Taye",
-    email: "ltaye3@timesonline.co.uk",
-    image: "images/student4.jpg",
+  }, {
+    id: ,
+    firstName: "Oralia",
+    lastName: "Dunlop",
+    email: "odunlop3@printfriendly.com",
+    image: "/images/grimmivt.jpg",
     gradYear: 2025
-  },
-  {
-    id: nanoid(),
-    firstName: "Sanson",
-    lastName: "Dunlap",
-    email: "sdunlap4@whitehouse.gov",
-    image: "images/student5.jpg",
+  }, {
+    id: ,
+    firstName: "Clarisse",
+    lastName: "Doghartie",
+    email: "cdoghartie4@chron.com",
+    image: "/images/student5.jpg",
     gradYear: 2024
-  },
-  {
-    id: nanoid(),
-    firstName: "Hendrik",
-    lastName: "Caswall",
-    email: "hcaswall5@netscape.com",
-    image: "images/student6.jpg",
+  }, {
+    id: ,
+    firstName: "Charil",
+    lastName: "Crolla",
+    email: "ccrolla5@omniture.com",
+    image: "/images/student6.jpg",
     gradYear: 2026
-  },
-  {
-    id: nanoid(),
-    firstName: "Aldrich",
-    lastName: "Struijs",
-    email: "astruijs6@domainmarket.com",
-    image: "images/student7.jpg",
+  }, {
+    id: ,
+    firstName: "Caryn",
+    lastName: "Whelband",
+    email: "cwhelband6@cmu.edu",
+    image: "/images/student7.jpg",
     gradYear: 2025
-  },
-  {
-    id: nanoid(),
-    firstName: "Rayshell",
-    lastName: "Nertney",
-    email: "rnertney7@mediafire.com",
-    image: "images/student8.jpg",
+  }, {
+    id: ,
+    firstName: "Giselle",
+    lastName: "Austwick",
+    email: "gaustwick7@nyu.edu",
+    image: "/images/student8.jpg",
     gradYear: 2024
-  },
-  {
-    id: nanoid(),
-    firstName: "Fran",
-    lastName: "Corten",
-    email: "fcorten8@stumbleupon.com",
-    image: "images/student9.jpg",
+  }, {
+    id: ,
+    firstName: "Brooke",
+    lastName: "Batham",
+    email: "bbatham8@networksolutions.com",
+    image: "/images/student9.jpg",
     gradYear: 2026
-  },
-  {
-    id: nanoid(),
-    firstName: "Shellysheldon",
-    lastName: "Hounson",
-    email: "shounson9@facebook.com",
-    image: "images/student10.jpg",
+  }, {
+    id: ,
+    firstName: "Vladamir",
+    lastName: "Hadaway",
+    email: "vhadaway9@skype.com",
+    image: "/images/student10.jpg",
     gradYear: 2025
   }];
 
-const saveStudents = (students) => {
-    setAllStudents (students);
+  const saveStudents = (students) => {
+    setAllStudents(students);
     setSearchResults(students);
     if(localStorage){
-      localStorage.setItem("students", JSON.stringify(students));
-      console.log("saved to local storage");
+      localStorage.setItem('students', JSON.stringify(students));
+      
     }
-  };
+  }
 
   const addStudent = (newStudent) => {
-    const updatedStudents = [...allStudents, newStudent]
+    const updatedStudents = [...allStudents, newStudent];
     saveStudents(updatedStudents);
-  }
+  };
 
-  const removeStudent= (studentToDelete)=> {
+  const removeStudent = (studentToDelete) => {
     //console.table(studentToDelete);
-    const updatedStudentArray= allStudents.filter(student => student.id !== studentToDelete.id);
-    saveStudents(updatedStudentArray);
+    const updatedStudentArray = allStudents.filter(student => student.id !== studentToDelete.id);
+    saveStudents(updatedStudentArray); 
   }
 
-  const updateStudent= (updatedStudent) =>{
-  //console.table(updatedStudent);
-    const updatedStudentArray = allStudents.map(student => student.id === updatedStudent.id ? {...student, ...updatedStudent} : student)
+  const updateStudent = (updatedStudent) => {
+    //console.table(updatedStudent);
+    const updatedStudentArray = allStudents.map(student => student.id === updatedStudent.id ? {...student, ...updatedStudent} : student);
     saveStudents(updatedStudentArray)
-}
-
+  }
 
   const searchStudents = () => {
     let keywordsArray = [];
 
-    if (keywords) keywordsArray = keywords.toLowerCase().split(' ');
-    if (gradYear) keywordsArray.push(gradYear.toString());
+    if(keywords){
+      keywordsArray = keywords.toLowerCase().split(' ');
+    }
 
-    if (keywordsArray.length > 0) {
-      const results = allStudents.filter((student) =>
-        keywordsArray.some(
-          (word) =>
-            student.firstName.toLowerCase().includes(word) ||
-            student.lastName.toLowerCase().includes(word) ||
-            student.gradYear === Number(word)
-        )
-      );
-      setSearchResults(results);
-    } else {
-      setSearchResults(allStudents);
+    if(gradYear){
+      keywordsArray.push(gradYear.toString());
+    }
+
+    if(keywordsArray.length > 0){
+      const searchResults = allStudents.filter(student => {
+        for(const word of keywordsArray){
+          if(student.firstName.toLowerCase().includes(word) ||
+             student.lastName.toLowerCase().includes(word) ||
+             student.gradYear === parseInt(word)){
+              return true;
+            }
+        }
+        return false;
+      });
+      setSearchResults(searchResults);
+    }else{
+      setSearchResults(allStudents)
     }
   };
 
-
- return (
+  return (
     <div className='container'>
       <div className='row' id='allStudents'>
         <h3>Current Students</h3>
-        {searchResults &&
-          searchResults.map((student) => (
-            <div className='col-lg-2' key={student.id}>
-              <Student student={student} removeStudent={removeStudent} updateStudent={updateStudent}/>
-              <div className='card'>
-                
-                
-              </div>
-            </div>
-          ))}
+        {searchResults && searchResults.map((student) => (
+        <div className='col-lg-2' key={student.id}>
+          <Student student={student} removeStudent={removeStudent} updateStudent={updateStudent}/>
+
+        </div>)
+  )}
       </div>
-{<AddStudent addStudent={addStudent}/>}
-      <div className='row mt-4'id='searchStudents'>
-        <h3>Search Students</h3>
-        <div className='col-md-4'>
-          <label htmlFor='txtKeywords'>Search by First or Last Name</label>
-          <input
-            type='text'
-            className='form-control'
-            placeholder='Search First or Last Name'
-            onChange={(e) => setKeyWords(e.target.value)}
-            value={keywords}
-          />
+
+        {/*!allStudents && <button type='button' className='btn btn-lg btn-success' onClick={() => setAllStudents(students)}>Save Students</button>*/}
+        {<AddStudent addStudent={addStudent}/>}
+        <div className='row mt-4' id='searchStudents'>
+          <h3>Search Students</h3>
+          <div className='col-md-4'>
+            <label htmlFor='txtKeywords'>Search by First or Last Name</label>
+            <input type='text' className='form-control' placeholder='Search First or Last Name' onChange={e => setKeyWords(e.currentTarget.value)} value={keywords}/>
+          </div>
+          <div className='col-md-4'>
+          <label htmlFor='select'>Search by Graduation Year</label>
+            <select className='form-select' value={gradYear} onChange={e => setGradYear(e.currentTarget.value)}>
+              <option value= ''>Select Year</option>
+              {_(allStudents).map(student => student.gradYear).sort().uniq().map(year => <option key={year} value={year}>{year}</option>).value()}
+            </select>
+          </div>
+          <div className='col-md-4 mt-3'>
+            <button type='button' className= 'btn btn-lg btn-primary' onClick={searchStudents}>Search Students <FontAwesomeIcon icon={faSearch} /></button>
+          </div>
+
         </div>
-        <div className='col-md-4'>
-          <select
-            className='form-select'
-            value={gradYear}
-            onChange={(e) => setGradYear(e.target.value)}
-          >
-            <option value=''>Select Year</option>
-            {_(allStudents)
-              .map((student) => student.gradYear)
-              .sort()
-              .uniq()
-              .map((year) => (
-                <option key={year} value={year}>
-                  {year}
-                </option>
-              ))
-              .value()}
-          </select>
-        
-        <div className='col-md-4 mt-3'>
-        <div></div>
-          <button type='button' className='btn btn-lg btn-primary' onClick={searchStudents}>Search Students <FontAwesomeIcon icon={faSearch}/></button>
-        </div>
-      </div>
     </div>
-    </div>
-  );
+  )
 }
 
-export default App;
+export default App

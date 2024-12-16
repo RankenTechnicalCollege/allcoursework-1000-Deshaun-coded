@@ -1,10 +1,9 @@
 import React, {useState} from 'react'
-
 import 'bootstrap/dist/css/bootstrap.min.css'
+import './AddStudent.css'
 import { nanoid } from 'nanoid';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
 import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'
-import './AddStudent.css'
 
 const AddStudent = (props) => {
   const[firstName, setFirstName]=useState('');
