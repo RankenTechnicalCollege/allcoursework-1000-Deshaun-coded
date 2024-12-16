@@ -6,7 +6,7 @@ import { faMagicWandSparkles, faWarning } from '@fortawesome/free-solid-svg-icon
 
 
 
-function Student(props) {
+const Student = (props) => {
 const [editMode, setEditMode] = useState(false)
 const[firstName, setFirstName] = useState('');
 const[lastName, setLastName]= useState('');
@@ -20,12 +20,13 @@ useEffect(()=> {
   setGradYear(props.student.gradYear);
 },[])
 
-const saveStudent = () =>
+const saveStudent = () =>{
   setEditMode(false);
 
-const updateStudent={firstName: firstName, lastName: lastName, email:email, gradYear, id: props.student.id, image: props.student.image};
+const updateStudent={firstName: firstName, lastName: lastName, email:email, gradYear:gradYear, id: props.student.id, image: props.student.image};
 props.updateStudent(updateStudent);
 
+}
   return (
     <div className='card'>
     <img src={props.student.image} alt='Student' className='card-img-top mx-auto' />
