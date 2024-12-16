@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="F_to_C.css">
+  <title>Temperature Converter</title>
+</head>
+<body>
+  
+      
+      <h1>Temperature Converter</h1>
+      <form id="converter-form">
+  <div id="radio">
+  <label>
+      
+    <input type="radio" name="degrees" class="" value="fahrenheit-to-celsius" checked>Fahrenheit to Celsius
+      
+      
+      <input type="radio" name="degrees" class="" value="celsius-to-fahrenheit">Celsius to Fahrenheit
+      </div>
+     
+      <label for="inputTemp" class="f">Enter F degrees: </label>
+      <input type="text" name="box" id="box"><br><br>
+
+      <label for="outputTemp" class="f">Degrees Celsius: </label>
+      <input type="text" id="total" disabled><br><br>
+
+      <div id="convert">
+        <input type="button" value="Convert" id="submit">
+      </div>
+
+    <br>
+    <span id="message"></span>
+    
+    </form>
+
+
+
+
+
+  <script>
+document.addEventListener('DOMContentLoaded', function () {
+      const convertBtn = document.getElementById('submit');
+      convertBtn.addEventListener('click', convertTemp);
+      
+      const radioButtons = document.querySelectorAll('input[type="radio"]');
+      radioButtons.forEach(function (radio) {
+        radio.addEventListener('change', toggleDisplay);
+      });
+    });
+
+    function toggleDisplay() {
+      const inputLabel = document.querySelector('label[for=inputTemp]');
+      const outputLabel = document.querySelector('label[for="outputTemp"]');
+      const conversionType = document.querySelector('input[name="degrees"]:checked').value;
+
+      if (conversionType === 'fahrenheit-to-celsius') {
+        inputLabel.textContent = 'Enter F degrees:';
+        outputLabel.textContent = 'Degrees Celsius:';
+      } else {
+        inputLabel.innerHTML = 'Enter C degrees:';
+        outputLabel.innerHTML = 'Degrees Fahrenheit:';
+      }
+
+      document.getElementById('message').textContent = '';
+      document.getElementById('total').value = '';
+      document.getElementById('box').value = '';
+    }
+
+    function toCelsius(fahrenheit) {
+      return (fahrenheit - 32) * 5/9;
+    }
+
+    function toFahrenheit(celsius) {
+      return celsius * 9/5 + 32;
+    }
+
+    function convertTemp() {
+      const inputTemp = parseFloat(document.getElementById('box').value);
+      const conversionType = document.querySelector('input[name="degrees"]:checked').value;
+
+      if (isNaN(inputTemp)) {
+        document.getElementById('message').textContent = 'You must enter a valid number for degrees';
+        return;
+      }
+
+      let result;
+      if (conversionType === 'fahrenheit-to-celsius') {
+        result = toCelsius(inputTemp).toFixed(0);
+      } else {
+        result = toFahrenheit(inputTemp).toFixed(0);
+      }
+
+      document.getElementById('total').value = result;
+      document.getElementById('message').textContent = '';
+    }
+  </script>
+</body>
+</html>
