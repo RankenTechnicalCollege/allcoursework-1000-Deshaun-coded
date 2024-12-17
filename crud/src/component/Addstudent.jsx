@@ -21,7 +21,7 @@ const AddStudent = (props) => {
       'gradYear' : parseInt(gradYear),
       'image': URL.createObjectURL(selectedFile)
     }
-    props.addStudent(newStudent)
+    props.AddStudent(newStudent)
   }
 
 const imageUpdate = (event) => {

@@ -12,22 +12,24 @@ h1 {
 div {
   margin-bottom: 1em;
 }
-label {
-  display: inline-block;
+
+label{
   width: 11em;
   text-align: right;
 }
-input, select {
-  margin-left: 1em;
-  margin-right: 0.5em;
+
+.f {
+  margin-left: 142px;
+  
 }
+
 select { 
   width: 13em; 
 }
 span {
   color: red;
 }
-.messages {
+#messages {
   border: 3px solid red;
   color: red;
   padding: 2em;
@@ -43,3 +45,15 @@ span {
 #register{
   margin:0px 54px 0px 0px
 }
+
+#radio{
+  
+    display: flex;
+
+}
+
+#convert{
+  display:flex;
+  justify-content: center;
+}
+
