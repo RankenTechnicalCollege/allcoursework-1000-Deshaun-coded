@@ -3,10 +3,10 @@ import Student from './component/Student';
 import AddStudent from './component/AddStudent';
 import './App.css';
 import 'bootstrap/dist/css/bootstrap.min.css';
-
 import _ from 'lodash';
 import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
 import { faSearch } from '@fortawesome/free-solid-svg-icons';
+import { nanoid } from 'nanoid';
 
 function App() {
   const [allStudents, setAllStudents] = useState([]);
@@ -28,74 +28,74 @@ function App() {
   }, []);
   
   const students= [{
-    id: ,
+    id:nanoid(),
     firstName: "Regine",
     lastName: "January",
     email: "rjanuary0@1und1.de",
-    image: "/images/student1.jpg",
+    image: "/images/chibi.jpg",
     gradYear: 2024 
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Livvie",
     lastName: "Martinat",
     email: "lmartinat1@w3.org",
-    image: "/images/student2.jpg",
+    image: "/images/mishymolly.jpg",
     gradYear: 2025
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Terrence",
     lastName: "Croal",
     email: "tcroal2@illinois.edu",
     image: "/images/Octopimp.jpg",
     gradYear: 2026
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Oralia",
     lastName: "Dunlop",
     email: "odunlop3@printfriendly.com",
     image: "/images/grimmivt.jpg",
     gradYear: 2025
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Clarisse",
     lastName: "Doghartie",
     email: "cdoghartie4@chron.com",
-    image: "/images/student5.jpg",
+    image: "/images/OkCode.jpg",
     gradYear: 2024
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Charil",
     lastName: "Crolla",
     email: "ccrolla5@omniture.com",
-    image: "/images/student6.jpg",
+    image: "/images/Olivia.jpg",
     gradYear: 2026
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Caryn",
     lastName: "Whelband",
     email: "cwhelband6@cmu.edu",
-    image: "/images/student7.jpg",
+    image: "/images/Filian.jpg",
     gradYear: 2025
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Giselle",
     lastName: "Austwick",
     email: "gaustwick7@nyu.edu",
-    image: "/images/student8.jpg",
+    image: "/images/Ironmouse.jpg",
     gradYear: 2024
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Brooke",
     lastName: "Batham",
     email: "bbatham8@networksolutions.com",
-    image: "/images/student9.jpg",
+    image: "/images/Eros.jpg",
     gradYear: 2026
   }, {
-    id: ,
+    id:nanoid() ,
     firstName: "Vladamir",
     lastName: "Hadaway",
     email: "vhadaway9@skype.com",
-    image: "/images/student10.jpg",
+    image: "/images/RubenSargasm.jpg",
     gradYear: 2025
   }];
 
