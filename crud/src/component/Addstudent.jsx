@@ -1,9 +1,9 @@
-import React, {useState} from 'react'
-import 'bootstrap/dist/css/bootstrap.min.css'
-import './AddStudent.css'
+import React, {useState} from 'react';
+import 'bootstrap/dist/css/bootstrap.min.css';
+import './AddStudent.css';
 import { nanoid } from 'nanoid';
-import {FontAwesomeIcon} from '@fortawesome/react-fontawesome'
-import {faPlusCircle} from '@fortawesome/free-solid-svg-icons'
+import {FontAwesomeIcon} from '@fortawesome/react-fontawesome';
+import {faPlusCircle} from '@fortawesome/free-solid-svg-icons';
 
 const AddStudent = (props) => {
   const[firstName, setFirstName]=useState('');
@@ -51,11 +51,11 @@ const imageUpdate = (event) => {
 
 
 <div className='col-md-2'>
-<label htmlFor='fileUpload' className='form-label'>Student Image</label>
+<label htmlFor='fileUpload' className='form-label'>Vtuber Image</label>
 <input type='file' id='fileUpload' className='form-control'  onChange={imageUpdate} />
 </div>
 <div className='col-md-4' >
-<button type='button' className='btn btn-success btn-lg' id='btnAdd' onClick={doWork}>Add Student<FontAwesomeIcon icon={faPlusCircle}/></button>
+<button type='button' className='btn btn-success btn-lg' id='btnAdd' onClick={doWork}>Add Vtuber <FontAwesomeIcon icon={faPlusCircle}/></button>
 </div>
 
 </div>

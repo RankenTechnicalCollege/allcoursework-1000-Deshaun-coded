@@ -29,71 +29,71 @@ function App() {
   
   const students= [{
     id:nanoid(),
-    firstName: "Regine",
-    lastName: "January",
+    firstName: "Chibi",
+    lastName: "Doki",
     email: "rjanuary0@1und1.de",
     image: "/images/chibi.jpg",
     gradYear: 2024 
   }, {
     id:nanoid() ,
-    firstName: "Livvie",
-    lastName: "Martinat",
+    firstName: "Mishy",
+    lastName: "Molly",
     email: "lmartinat1@w3.org",
     image: "/images/mishymolly.jpg",
     gradYear: 2025
   }, {
     id:nanoid() ,
-    firstName: "Terrence",
-    lastName: "Croal",
+    firstName: "OctoPimp",
+    lastName: "",
     email: "tcroal2@illinois.edu",
     image: "/images/Octopimp.jpg",
     gradYear: 2026
   }, {
     id:nanoid() ,
-    firstName: "Oralia",
-    lastName: "Dunlop",
+    firstName: "Grevillea",
+    lastName: "Grimooire",
     email: "odunlop3@printfriendly.com",
     image: "/images/grimmivt.jpg",
     gradYear: 2025
   }, {
     id:nanoid() ,
-    firstName: "Clarisse",
-    lastName: "Doghartie",
+    firstName: "OkCode",
+    lastName: "",
     email: "cdoghartie4@chron.com",
     image: "/images/OkCode.jpg",
     gradYear: 2024
   }, {
     id:nanoid() ,
-    firstName: "Charil",
-    lastName: "Crolla",
+    firstName: "Oliva",
+    lastName: "Monroe",
     email: "ccrolla5@omniture.com",
     image: "/images/Olivia.jpg",
     gradYear: 2026
   }, {
     id:nanoid() ,
-    firstName: "Caryn",
-    lastName: "Whelband",
+    firstName: "Filian",
+    lastName: "",
     email: "cwhelband6@cmu.edu",
-    image: "/images/Filian.jpg",
+    image: "/images/filian.jpg",
     gradYear: 2025
   }, {
     id:nanoid() ,
-    firstName: "Giselle",
-    lastName: "Austwick",
+    firstName: "Iron",
+    lastName: "Mouse",
     email: "gaustwick7@nyu.edu",
-    image: "/images/Ironmouse.jpg",
+    image: "/images/ironmouse.jpg",
     gradYear: 2024
   }, {
     id:nanoid() ,
-    firstName: "Brooke",
-    lastName: "Batham",
+    firstName: "Eros",
+    lastName: "Valentyne",
     email: "bbatham8@networksolutions.com",
     image: "/images/Eros.jpg",
     gradYear: 2026
   }, {
     id:nanoid() ,
-    firstName: "Vladamir",
-    lastName: "Hadaway",
+    firstName: "Ruben",
+    lastName: "Sargasm",
     email: "vhadaway9@skype.com",
     image: "/images/RubenSargasm.jpg",
     gradYear: 2025
@@ -168,7 +168,7 @@ function App() {
         {/*!allStudents && <button type='button' className='btn btn-lg btn-success' onClick={() => setAllStudents(students)}>Save Students</button>*/}
         {<AddStudent addStudent={addStudent}/>}
         <div className='row mt-4' id='searchStudents'>
-          <h3>Search Students</h3>
+          <h3>Search Vtuber</h3>
           <div className='col-md-4'>
             <label htmlFor='txtKeywords'>Search by First or Last Name</label>
             <input type='text' className='form-control' placeholder='Search First or Last Name' onChange={e => setKeyWords(e.currentTarget.value)} value={keywords}/>
@@ -181,7 +181,7 @@ function App() {
             </select>
           </div>
           <div className='col-md-4 mt-3'>
-            <button type='button' className= 'btn btn-lg btn-primary' onClick={searchStudents}>Search Students <FontAwesomeIcon icon={faSearch} /></button>
+            <button type='button' className= 'btn btn-lg btn-primary' onClick={searchStudents}>Search Vtuber <FontAwesomeIcon icon={faSearch} /></button>
           </div>
 
         </div>
