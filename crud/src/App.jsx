@@ -31,29 +31,29 @@ function App() {
     id:nanoid(),
     firstName: "Chibi",
     lastName: "Doki",
-    email: "rjanuary0@1und1.de",
-    image: "/crud/public/images/chibi.jpg",
+    email: "chibidoki@mythictalent.com",
+    image: "images/chibi.jpg",
     gradYear: 2024 
   }, {
     id:nanoid() ,
     firstName: "Mishy",
     lastName: "Molly",
-    email: "lmartinat1@w3.org",
-    image: "/images/mishymolly.jpg",
+    email: "mollymishy@gmail.com",
+    image: "images/mishymolly.jpg",
     gradYear: 2025
   }, {
     id:nanoid() ,
     firstName: "OctoPimp",
     lastName: "",
     email: "tcroal2@illinois.edu",
-    image: "/images/Octopimp.jpg",
+    image: "images/Octopimp.jpg",
     gradYear: 2026
   }, {
     id:nanoid() ,
     firstName: "Grevillea",
     lastName: "Grimoire",
-    email: "odunlop3@printfriendly.com",
-    image: "/images/grimmivt.jpg",
+    email: "grimmiva@gmail.com",
+    image: "images/grimmivt.jpg",
     gradYear: 2025
   }, {
     id:nanoid() ,
@@ -66,7 +66,7 @@ function App() {
     id:nanoid() ,
     firstName: "Oliva",
     lastName: "Monroe",
-    email: "ccrolla5@omniture.com",
+    email: "Olivia@gmail.com",
     image: "/images/Olivia.jpg",
     gradYear: 2026
   }, {
@@ -95,7 +95,7 @@ function App() {
     firstName: "Ruben",
     lastName: "Sargasm",
     email: "vhadaway9@skype.com",
-    image: "/images/RubenSargasm.jpg",
+    image: "images/RubenSargasm.jpg",
     gradYear: 2025
   }];
 
