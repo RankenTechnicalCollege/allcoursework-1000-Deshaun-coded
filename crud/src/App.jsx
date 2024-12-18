@@ -32,7 +32,7 @@ function App() {
     firstName: "Chibi",
     lastName: "Doki",
     email: "rjanuary0@1und1.de",
-    image: "/images/chibi.jpg",
+    image: "/crud/public/images/chibi.jpg",
     gradYear: 2024 
   }, {
     id:nanoid() ,
@@ -51,7 +51,7 @@ function App() {
   }, {
     id:nanoid() ,
     firstName: "Grevillea",
-    lastName: "Grimooire",
+    lastName: "Grimoire",
     email: "odunlop3@printfriendly.com",
     image: "/images/grimmivt.jpg",
     gradYear: 2025
