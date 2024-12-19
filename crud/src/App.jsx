@@ -60,35 +60,35 @@ function App() {
     firstName: "OkCode",
     lastName: "",
     email: "cdoghartie4@chron.com",
-    image: "/images/OkCode.jpg",
+    image: "images/OkCode.jpg",
     gradYear: 2024
   }, {
     id:nanoid() ,
     firstName: "Oliva",
     lastName: "Monroe",
     email: "Olivia@gmail.com",
-    image: "/images/Olivia.jpg",
+    image: "images/Olivia.jpg",
     gradYear: 2026
   }, {
     id:nanoid() ,
     firstName: "Filian",
     lastName: "",
     email: "cwhelband6@cmu.edu",
-    image: "/images/filian.jpg",
+    image: "images/filian.jpg",
     gradYear: 2025
   }, {
     id:nanoid() ,
     firstName: "Iron",
     lastName: "Mouse",
     email: "gaustwick7@nyu.edu",
-    image: "/images/ironmouse.jpg",
+    image: "images/ironmouse.jpg",
     gradYear: 2024
   }, {
     id:nanoid() ,
     firstName: "Eros",
     lastName: "Valentyne",
     email: "bbatham8@networksolutions.com",
-    image: "/images/Eros.jpg",
+    image: "images/Eros.jpg",
     gradYear: 2026
   }, {
     id:nanoid() ,

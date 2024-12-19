@@ -1,5 +1,5 @@
 import { useState } from 'react'
-import TodoForm from './components/TodoForm'
+import TodoList from './components/TodoList'
 import './App.css'
 
 function App() {
@@ -7,7 +7,7 @@ function App() {
 
   return (
    <>
-   <TodoForm />
+   <TodoList/>
    </>
   )
 }
