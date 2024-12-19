@@ -45,7 +45,7 @@ function App() {
     id:nanoid() ,
     firstName: "OctoPimp",
     lastName: "",
-    email: "tcroal2@illinois.edu",
+    email: "tlawless@voxusa.net",
     image: "images/Octopimp.jpg",
     gradYear: 2026
   }, {
@@ -59,7 +59,7 @@ function App() {
     id:nanoid() ,
     firstName: "OkCode",
     lastName: "",
-    email: "cdoghartie4@chron.com",
+    email: "okcode@mythictalent.com",
     image: "images/OkCode.jpg",
     gradYear: 2024
   }, {
@@ -73,28 +73,28 @@ function App() {
     id:nanoid() ,
     firstName: "Filian",
     lastName: "",
-    email: "cwhelband6@cmu.edu",
+    email: "",
     image: "images/filian.jpg",
     gradYear: 2025
   }, {
     id:nanoid() ,
     firstName: "Iron",
     lastName: "Mouse",
-    email: "gaustwick7@nyu.edu",
+    email: "ironmouseparty@gmail.com",
     image: "images/ironmouse.jpg",
     gradYear: 2024
   }, {
     id:nanoid() ,
     firstName: "Eros",
     lastName: "Valentyne",
-    email: "bbatham8@networksolutions.com",
+    email: "ErosValentyne@gmail.com",
     image: "images/Eros.jpg",
     gradYear: 2026
   }, {
     id:nanoid() ,
     firstName: "Ruben",
     lastName: "Sargasm",
-    email: "vhadaway9@skype.com",
+    email: " rubensargasm@gmail.com",
     image: "images/RubenSargasm.jpg",
     gradYear: 2025
   }];
